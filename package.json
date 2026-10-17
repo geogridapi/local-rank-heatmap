@@ -1,0 +1,41 @@
+{
+  "name": "local-rank-heatmap",
+  "version": "1.0.0",
+  "description": "See where a business ranks on Google Maps, block by block: one command turns a Google Business Profile and a keyword into a local SEO geo-grid heatmap (HTML map, PNG, CSV).",
+  "type": "module",
+  "bin": {
+    "local-rank-heatmap": "heatmap.js"
+  },
+  "files": [
+    "heatmap.js",
+    "src"
+  ],
+  "scripts": {
+    "heatmap": "node heatmap.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20.12"
+  },
+  "keywords": [
+    "local-seo",
+    "geogrid",
+    "geo-grid",
+    "heatmap",
+    "google-maps",
+    "rank-tracker",
+    "google-business-profile",
+    "local-rank-tracker",
+    "seo"
+  ],
+  "homepage": "https://github.com/geogridapi/local-rank-heatmap#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geogridapi/local-rank-heatmap.git"
+  },
+  "bugs": {
+    "url": "https://github.com/geogridapi/local-rank-heatmap/issues"
+  },
+  "license": "MIT",
+  "author": "Localnord, LLC (GeoGridAPI)"
+}

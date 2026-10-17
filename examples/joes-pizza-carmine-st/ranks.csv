@@ -1,0 +1,50 @@
+﻿row,col,lat,lng,rank,top1,top2,top3
+0,0,40.748646132118374,-74.02591264463835,,Joe's Pizza Broadway,Roma Pizza & restaurant,Quality Pizza Co. Hoboken
+0,1,40.748646132118374,-74.01799866309223,,Joe's Pizza Broadway,Vito's Slices and Ices,Roma Pizza & restaurant
+0,2,40.748646132118374,-74.01008468154612,,Joe's Pizza Broadway,Roma Pizza & restaurant,Quality Pizza Co. Midtown
+0,3,40.748646132118374,-74.0021707,,Joe's Pizza Broadway,Roma Pizza & restaurant,SIMÒ PIZZA - MIDTOWN
+0,4,40.748646132118374,-73.99425671845387,,Joe's Pizza Broadway,Roma Pizza & restaurant,Vito's Slices and Ices
+0,5,40.748646132118374,-73.98634273690776,,Joe's Pizza Broadway,Vito's Slices and Ices,Roma Pizza & restaurant
+0,6,40.748646132118374,-73.97842875536163,,Joe's Pizza Broadway,Roma Pizza & restaurant,Vito's Slices and Ices
+1,0,40.74265065474558,-74.02591050438778,,Joe's Pizza Broadway,Roma Pizza & restaurant,NY Pizza Suprema
+1,1,40.74265065474558,-74.01799723625851,,Joe's Pizza Broadway,Roma Pizza & restaurant,Quality Pizza Co. Midtown
+1,2,40.74265065474558,-74.01008396812925,,Joe's Pizza Broadway,Roma Pizza & restaurant,Vito's Slices and Ices
+1,3,40.74265065474558,-74.0021707,,Joe's Pizza Broadway,Vito's Slices and Ices,Roma Pizza & restaurant
+1,4,40.74265065474558,-73.99425743187074,,Joe's Pizza Broadway,Vito's Slices and Ices,SIMÒ PIZZA - MIDTOWN
+1,5,40.74265065474558,-73.98634416374148,,Joe's Pizza Broadway,Vito's Slices and Ices,ANDIAMO PIZZA
+1,6,40.74265065474558,-73.9784308956122,,Joe's Pizza Broadway,Roma Pizza & restaurant,Vito's Slices and Ices
+2,0,40.73665517737279,-74.02590836478294,20,Joe's Pizza Broadway,Song' E Napule,L’industrie Pizzeria - West Village
+2,1,40.73665517737279,-74.0179958098553,,Joe's Pizza Broadway,Rubirosa,Roma Pizza & restaurant
+2,2,40.73665517737279,-74.01008325492764,,Joe's Pizza Broadway,Rubirosa,Fermento Pizza NYC
+2,3,40.73665517737279,-74.0021707,,Joe's Pizza Broadway,Vito's Slices and Ices,Roma Pizza & restaurant
+2,4,40.73665517737279,-73.99425814507235,,Joe's Pizza Broadway,Vito's Slices and Ices,Roma Pizza & restaurant
+2,5,40.73665517737279,-73.9863455901447,,Joe's Pizza Broadway,Vito's Slices and Ices,Roma Pizza & restaurant
+2,6,40.73665517737279,-73.97843303521705,,Joe's Pizza Broadway,Roma Pizza & restaurant,SIMÒ PIZZA - MIDTOWN
+3,0,40.7306597,-74.0259062258236,,Joe's Pizza Broadway,Song' E Napule,Roma Pizza & restaurant
+3,1,40.7306597,-74.01799438388241,,Joe's Pizza Broadway,Rubirosa,Roma Pizza & restaurant
+3,2,40.7306597,-74.0100825419412,,Song' E Napule,Joe's Pizza Broadway,L’industrie Pizzeria - West Village
+3,3,40.7306597,-74.0021707,,Joe's Pizza Broadway,Rubirosa,Roma Pizza & restaurant
+3,4,40.7306597,-73.99425885805879,16,L’industrie Pizzeria - West Village,Nolita Pizza,Pizzazz
+3,5,40.7306597,-73.98634701611758,18,Nolita Pizza,L’industrie Pizzeria - West Village,Joe’s Pizza
+3,6,40.7306597,-73.97843517417638,,Joe's Pizza Broadway,Rubirosa,Song' E Napule
+4,0,40.724664222627204,-74.02590408750957,,Rubirosa,Song' E Napule,Fermento Pizza NYC
+4,1,40.724664222627204,-74.01799295833972,16,Nolita Pizza,L’industrie Pizzeria - West Village,Joe’s Pizza
+4,2,40.724664222627204,-74.01008182916985,,Grand Street Pizza,Rubirosa,Song' E Napule
+4,3,40.724664222627204,-74.0021707,20,Song' E Napule,L’industrie Pizzeria - West Village,Rubirosa
+4,4,40.724664222627204,-73.99425957083014,,Rubirosa,Song' E Napule,Fermento Pizza NYC
+4,5,40.724664222627204,-73.98634844166027,,Rubirosa,Fermento Pizza NYC,Song' E Napule
+4,6,40.724664222627204,-73.97843731249041,,L’industrie Pizzeria - West Village,Song' E Napule,Rubirosa
+5,0,40.71866874525441,-74.0259019498406,,Rubirosa,Song' E Napule,Prince Street Pizza
+5,1,40.71866874525441,-74.01799153322706,,Grand Street Pizza,Rubirosa,Song' E Napule
+5,2,40.71866874525441,-74.01008111661353,,Rubirosa,Fermento Pizza NYC,Song' E Napule
+5,3,40.71866874525441,-74.0021707,,Rubirosa,Song' E Napule,Fermento Pizza NYC
+5,4,40.71866874525441,-73.99426028338645,,Rubirosa,Song' E Napule,Fermento Pizza NYC
+5,5,40.71866874525441,-73.98634986677293,,Song' E Napule,L’industrie Pizzeria - West Village,Rubirosa
+5,6,40.71866874525441,-73.97843945015939,,Song' E Napule,Rubirosa,L’industrie Pizzeria - West Village
+6,0,40.71267326788162,-74.02589981281649,,Dellarocco's Brick Oven Pizza,The Pizzeria on Pine,Tino's Artisan Pizza Co.
+6,1,40.71267326788162,-74.01799010854432,,Rubirosa,Song' E Napule,Fermento Pizza NYC
+6,2,40.71267326788162,-74.01008040427216,,Song' E Napule,Rubirosa,Pizza Loves Sauce
+6,3,40.71267326788162,-74.0021707,17,Song' E Napule,L’industrie Pizzeria - West Village,Rubirosa
+6,4,40.71267326788162,-73.99426099572783,,Song' E Napule,L’industrie Pizzeria - West Village,Rubirosa
+6,5,40.71267326788162,-73.98635129145566,19,Nolita Pizza,L’industrie Pizzeria - West Village,Joe’s Pizza
+6,6,40.71267326788162,-73.9784415871835,15,L’industrie Pizzeria - West Village,Nolita Pizza,Pizzazz

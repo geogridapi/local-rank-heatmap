@@ -1,0 +1,50 @@
+﻿row,col,lat,lng,rank,top1,top2,top3
+0,0,40.77266593211838,-74.01077962564689,3,Pizza Tower,"Slice & Co Fine Gourmet Brick Oven Pizza, Inc",Joe's Pizza Broadway
+0,1,40.77266593211838,-74.00286278376458,3,Pizza Tower,"Slice & Co Fine Gourmet Brick Oven Pizza, Inc",Joe's Pizza Broadway
+0,2,40.77266593211838,-73.99494594188229,2,Previti Pasta & Pizza,Joe's Pizza Broadway,SIMÒ PIZZA - MIDTOWN
+0,3,40.77266593211838,-73.9870291,2,Previti Pasta & Pizza,Joe's Pizza Broadway,Supreme Eats Pizza And Pasta
+0,4,40.77266593211838,-73.97911225811771,2,Mimi's Pizza (3rd Ave & 86th),Joe's Pizza Broadway,LaVista Pizza (2nd Ave)
+0,5,40.77266593211838,-73.97119541623542,5,Mimi's Pizza (3rd Ave & 86th),Surf City Pizzeria 3,Previti Pasta & Pizza
+0,6,40.77266593211838,-73.96327857435311,5,Mimi's Pizza (3rd Ave & 86th),Surf City Pizzeria 3,Previti Pasta & Pizza
+1,0,40.76667045474559,-74.01077748280707,1,Joe's Pizza Broadway,Roma Pizza & restaurant,Previti Pasta & Pizza
+1,1,40.76667045474559,-74.00286135520471,1,Joe's Pizza Broadway,SIMÒ PIZZA - MIDTOWN,Little Italy Pizza
+1,2,40.76667045474559,-73.99494522760236,1,Joe's Pizza Broadway,SIMÒ PIZZA - MIDTOWN,Little Italy Pizza
+1,3,40.76667045474559,-73.9870291,1,Joe's Pizza Broadway,SIMÒ PIZZA - MIDTOWN,Little Italy Pizza
+1,4,40.76667045474559,-73.97911297239764,1,Joe's Pizza Broadway,SIMÒ PIZZA - MIDTOWN,ANDIAMO PIZZA
+1,5,40.76667045474559,-73.97119684479529,1,Joe's Pizza Broadway,SIMÒ PIZZA - MIDTOWN,Little Italy Pizza
+1,6,40.76667045474559,-73.96328071719293,4,Soho Pizza,Pizza Veloce Astoria,Due Fratelli Sunnyside
+2,0,40.760674977372794,-74.01077534061388,1,Joe's Pizza Broadway,SIMÒ PIZZA - MIDTOWN,Patsy's Pizzeria Flatiron
+2,1,40.760674977372794,-74.00285992707592,1,Joe's Pizza Broadway,SIMÒ PIZZA - MIDTOWN,Little Italy Pizza
+2,2,40.760674977372794,-73.99494451353796,1,Joe's Pizza Broadway,SIMÒ PIZZA - MIDTOWN,Little Italy Pizza
+2,3,40.760674977372794,-73.9870291,1,Joe's Pizza Broadway,SIMÒ PIZZA - MIDTOWN,Little Italy Pizza
+2,4,40.760674977372794,-73.97911368646204,1,Joe's Pizza Broadway,SIMÒ PIZZA - MIDTOWN,Patsy's Pizzeria Flatiron
+2,5,40.760674977372794,-73.97119827292408,5,Quality Pizza Co. Midtown,Pizzazz,NY Pizza Suprema
+2,6,40.760674977372794,-73.96328285938613,1,Joe's Pizza Broadway,SIMÒ PIZZA - MIDTOWN,Patsy's Pizzeria Flatiron
+3,0,40.7546795,-74.01077319906709,1,Joe's Pizza Broadway,SIMÒ PIZZA - MIDTOWN,Little Italy Pizza
+3,1,40.7546795,-74.00285849937806,1,Joe's Pizza Broadway,SIMÒ PIZZA - MIDTOWN,Little Italy Pizza
+3,2,40.7546795,-73.99494379968903,1,Joe's Pizza Broadway,SIMÒ PIZZA - MIDTOWN,Little Italy Pizza
+3,3,40.7546795,-73.9870291,1,Joe's Pizza Broadway,SIMÒ PIZZA - MIDTOWN,Little Italy Pizza
+3,4,40.7546795,-73.97911440031098,1,Joe's Pizza Broadway,SIMÒ PIZZA - MIDTOWN,Il Miglio Brick Oven Pizzeria & Italian Restaurant
+3,5,40.7546795,-73.97119970062194,1,Joe's Pizza Broadway,Roma Pizza & restaurant,Don Antonio
+3,6,40.7546795,-73.96328500093291,4,Soho Pizza,Pizza Veloce Astoria,Due Fratelli Sunnyside
+4,0,40.74868402262721,-74.01077105816647,1,Joe's Pizza Broadway,SIMÒ PIZZA - MIDTOWN,Little Italy Pizza
+4,1,40.74868402262721,-74.00285707211098,1,Joe's Pizza Broadway,SIMÒ PIZZA - MIDTOWN,Little Italy Pizza
+4,2,40.74868402262721,-73.99494308605549,2,Roma Pizza & restaurant,Joe's Pizza Broadway,Vito's Slices and Ices
+4,3,40.74868402262721,-73.9870291,1,Joe's Pizza Broadway,SIMÒ PIZZA - MIDTOWN,Patsy's Pizzeria Flatiron
+4,4,40.74868402262721,-73.97911511394452,1,Joe's Pizza Broadway,SIMÒ PIZZA - MIDTOWN,Little Italy Pizza
+4,5,40.74868402262721,-73.97120112788902,1,Joe's Pizza Broadway,SIMÒ PIZZA - MIDTOWN,Little Italy Pizza
+4,6,40.74868402262721,-73.96328714183353,4,Soho Pizza,Pizza Veloce Astoria,Due Fratelli Sunnyside
+5,0,40.74268854525442,-74.01076891791182,1,Joe's Pizza Broadway,SIMÒ PIZZA - MIDTOWN,Little Italy Pizza
+5,1,40.74268854525442,-74.00285564527455,1,Joe's Pizza Broadway,SIMÒ PIZZA - MIDTOWN,Little Italy Pizza
+5,2,40.74268854525442,-73.99494237263727,1,Joe's Pizza Broadway,SIMÒ PIZZA - MIDTOWN,Little Italy Pizza
+5,3,40.74268854525442,-73.9870291,1,Joe's Pizza Broadway,SIMÒ PIZZA - MIDTOWN,Little Italy Pizza
+5,4,40.74268854525442,-73.97911582736273,1,Joe's Pizza Broadway,SIMÒ PIZZA - MIDTOWN,Patsy's Pizzeria Flatiron
+5,5,40.74268854525442,-73.97120255472545,2,Pizza Veloce Astoria,Joe's Pizza Broadway,SIMÒ PIZZA - MIDTOWN
+5,6,40.74268854525442,-73.96328928208818,4,Soho Pizza,Pizza Veloce Astoria,Due Fratelli Sunnyside
+6,0,40.736693067881625,-74.0107667783029,3,Pizza Loves Sauce,Fermento Pizza NYC,Joe's Pizza Broadway
+6,1,40.736693067881625,-74.00285421886859,1,Joe's Pizza Broadway,SIMÒ PIZZA - MIDTOWN,Little Italy Pizza
+6,2,40.736693067881625,-73.9949416594343,1,Joe's Pizza Broadway,SIMÒ PIZZA - MIDTOWN,Little Italy Pizza
+6,3,40.736693067881625,-73.9870291,1,Joe's Pizza Broadway,SIMÒ PIZZA - MIDTOWN,Little Italy Pizza
+6,4,40.736693067881625,-73.9791165405657,1,Joe's Pizza Broadway,SIMÒ PIZZA - MIDTOWN,Patsy's Pizzeria Flatiron
+6,5,40.736693067881625,-73.97120398113141,2,Pizza Veloce Astoria,Joe's Pizza Broadway,SIMÒ PIZZA - MIDTOWN
+6,6,40.736693067881625,-73.96329142169711,1,Joe's Pizza Broadway,Soho Pizza,Sotto Le Stelle

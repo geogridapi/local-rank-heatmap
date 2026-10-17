@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>“pizza” around Joe&#39;s Pizza · Local rank heatmap</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/5.24.0/maplibre-gl.css" integrity="sha512-KIMsMWIdnoG9OwZa+oaIafmbDonqck1UCmq+/zcUi2aaZ97N9QE6TqpTM+n36EO40HGh64hU/375zxtjx7WTyQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<style>
+:root {
+  --bg: #f3f5fa; --surface: #ffffff; --border: #dbe1ee; --ink: #121826; --muted: #4a5163;
+  --primary: #2f5bea; --primary-ink: #1d3fb3;
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; --font-display: "Plus Jakarta Sans", "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --radius-lg: 18px; --radius-sm: 8px;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+body { background: var(--bg); color: var(--ink); font: 15px/1.5 var(--font-sans); }
+.layout { display: grid; grid-template-columns: minmax(320px, 380px) 1fr; height: 100vh; }
+.panel { overflow-y: auto; padding: 28px 28px 20px; background: var(--surface); border-right: 1px solid var(--border); display: flex; flex-direction: column; gap: 18px; }
+.eyebrow { margin: 0; font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--primary-ink); display: flex; gap: 8px; align-items: center; }
+.mode { letter-spacing: .02em; text-transform: none; font-weight: 600; font-size: 11px; padding: 2px 8px; border-radius: 999px; background: #eaeef8; color: var(--muted); }
+.mode.live { background: #e7f6ee; color: #047857; }
+h1 { margin: -6px 0 0; font: 800 clamp(28px, 3.2vw, 38px)/1.1 var(--font-display); letter-spacing: -.02em; overflow-wrap: anywhere; }
+.place { margin: -10px 0 0; font-weight: 600; }
+.meta { margin: -14px 0 0; color: var(--muted); font-size: 13px; }
+.stats { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.stat { border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 10px 12px; display: flex; flex-direction: column; }
+.stat-main { grid-column: 1 / -1; background: #f7f9fe; border-color: #c9d4f3; padding: 14px 16px; }
+.stat-value { font: 700 22px/1.15 var(--font-display); font-variant-numeric: tabular-nums; }
+.stat-main .stat-value { font-size: 44px; color: var(--primary-ink); }
+.stat-label { color: var(--muted); font-size: 12.5px; }
+.legend { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 12.5px; color: var(--muted); }
+.legend li { display: flex; align-items: center; gap: 6px; }
+.legend i { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+.ahead h2 { margin: 0 0 8px; font: 700 14px/1.3 var(--font-display); }
+.ahead ol { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+.ahead li { display: grid; gap: 4px; font-size: 13.5px; }
+.ahead .row { display: flex; justify-content: space-between; gap: 12px; }
+.ahead .name { font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ahead .count { color: var(--muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.ahead .bar { height: 6px; border-radius: 3px; background: #eaeef8; overflow: hidden; }
+.ahead .bar span { display: block; height: 100%; background: var(--primary); border-radius: 3px; }
+.ahead .empty { color: var(--muted); font-size: 13.5px; }
+.credit { margin-top: auto; color: var(--muted); font-size: 12px; }
+.credit a { color: var(--primary-ink); }
+.map { height: 100%; min-height: 360px; }
+.marker { width: 30px; height: 30px; cursor: pointer; border-radius: 50%; }
+.dot { display: grid; place-items: center; width: 100%; height: 100%; border-radius: 50%; font: 700 11.5px/1 var(--font-sans); letter-spacing: -.02em; border: 2px solid rgba(255,255,255,.9); box-shadow: 0 1px 4px rgba(18,24,38,.35); transition: transform .15s ease; }
+.marker:hover .dot, .marker:focus-visible .dot { transform: scale(1.15); }
+.center-pin { width: 42px; height: 42px; border-radius: 50%; border: 3px solid var(--primary); box-shadow: 0 0 0 2px #fff; pointer-events: none; }
+.maplibregl-popup-content { font: 13px/1.45 var(--font-sans); padding: 12px 14px; border-radius: var(--radius-sm); box-shadow: 0 6px 24px rgba(18,24,38,.18); }
+.maplibregl-popup-content strong { font-family: var(--font-display); }
+.maplibregl-popup-content ol { margin: 6px 0 0; padding-left: 18px; }
+:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+@media (max-width: 760px) {
+  .layout { grid-template-columns: 1fr; grid-template-rows: 58vh auto; height: auto; }
+  .map { grid-row: 1; }
+  .panel { grid-row: 2; border-right: 0; border-top: 1px solid var(--border); padding: 20px 16px; overflow: visible; }
+}
+@media (prefers-reduced-motion: reduce) { .dot { transition: none; } }
+</style>
+</head>
+<body>
+<main class="layout">
+  <aside class="panel" aria-labelledby="keyword">
+    <p class="eyebrow">Local rank heatmap <span class="mode" id="mode"></span></p>
+    <h1 id="keyword"></h1>
+    <p class="place" id="place"></p>
+    <p class="meta" id="meta"></p>
+    <section class="stats" aria-label="Summary">
+      <div class="stat stat-main"><span class="stat-value" id="avg"></span><span class="stat-label" id="avg-label">average rank where the listing appears</span></div>
+      <div class="stat"><span class="stat-value" id="top3"></span><span class="stat-label">points in the top 3</span></div>
+      <div class="stat"><span class="stat-value" id="found"></span><span class="stat-label">points in the top 20</span></div>
+    </section>
+    <ul class="legend" id="legend" aria-label="Rank colors"></ul>
+    <section class="ahead" aria-labelledby="ahead-title">
+      <h2 id="ahead-title">Ranking ahead most often</h2>
+      <ol id="competitors"></ol>
+    </section>
+    <footer class="credit">Ranks are Google Maps positions at each point. Measured with <a href="https://geogridapi.io" rel="noopener">GeoGridAPI</a>, drawn by <a href="https://github.com/geogridapi/local-rank-heatmap" rel="noopener">local-rank-heatmap</a>.</footer>
+  </aside>
+  <div class="map" id="map" role="region" aria-label="Map of ranks"></div>
+</main>
+<script>window.GRID = {"keyword":"pizza","mode":"live","place":{"place_id":"ChIJ8Q2WSpJZwokRQz-bYYgEskM","name":"Joe's Pizza","address":"7 Carmine St, New York, NY 10014, United States","lat":40.7306597,"lng":-74.0021707},"shape":"square","size":7,"density":null,"radiusKm":2,"pointsTotal":49,"summary":{"average_rank":17.63,"average_rank_with_misses":20.45,"top3_points":0,"found_points":8},"completedAt":"2026-10-17T18:39:30.523+00:00","points":[{"row":0,"col":0,"lat":40.748646132118374,"lng":-74.02591264463835,"rank":null,"top":[{"rank":1,"name":"Joe's Pizza Broadway"},{"rank":2,"name":"Roma Pizza \u0026 restaurant"},{"rank":3,"name":"Quality Pizza Co. Hoboken"}]},{"row":0,"col":1,"lat":40.748646132118374,"lng":-74.01799866309223,"rank":null,"top":[{"rank":1,"name":"Joe's Pizza Broadway"},{"rank":2,"name":"Vito's Slices and Ices"},{"rank":3,"name":"Roma Pizza \u0026 restaurant"}]},{"row":0,"col":2,"lat":40.748646132118374,"lng":-74.01008468154612,"rank":null,"top":[{"rank":1,"name":"Joe's Pizza Broadway"},{"rank":2,"name":"Roma Pizza \u0026 restaurant"},{"rank":3,"name":"Quality Pizza Co. Midtown"}]},{"row":0,"col":3,"lat":40.748646132118374,"lng":-74.0021707,"rank":null,"top":[{"rank":1,"name":"Joe's Pizza Broadway"},{"rank":2,"name":"Roma Pizza \u0026 restaurant"},{"rank":3,"name":"SIMÒ PIZZA - MIDTOWN"}]},{"row":0,"col":4,"lat":40.748646132118374,"lng":-73.99425671845387,"rank":null,"top":[{"rank":1,"name":"Joe's Pizza Broadway"},{"rank":2,"name":"Roma Pizza \u0026 restaurant"},{"rank":3,"name":"Vito's Slices and Ices"}]},{"row":0,"col":5,"lat":40.748646132118374,"lng":-73.98634273690776,"rank":null,"top":[{"rank":1,"name":"Joe's Pizza Broadway"},{"rank":2,"name":"Vito's Slices and Ices"},{"rank":3,"name":"Roma Pizza \u0026 restaurant"}]},{"row":0,"col":6,"lat":40.748646132118374,"lng":-73.97842875536163,"rank":null,"top":[{"rank":1,"name":"Joe's Pizza Broadway"},{"rank":2,"name":"Roma Pizza \u0026 restaurant"},{"rank":3,"name":"Vito's Slices and Ices"}]},{"row":1,"col":0,"lat":40.74265065474558,"lng":-74.02591050438778,"rank":null,"top":[{"rank":1,"name":"Joe's Pizza Broadway"},{"rank":2,"name":"Roma Pizza \u0026 restaurant"},{"rank":3,"name":"NY Pizza Suprema"}]},{"row":1,"col":1,"lat":40.74265065474558,"lng":-74.01799723625851,"rank":null,"top":[{"rank":1,"name":"Joe's Pizza Broadway"},{"rank":2,"name":"Roma Pizza \u0026 restaurant"},{"rank":3,"name":"Quality Pizza Co. Midtown"}]},{"row":1,"col":2,"lat":40.74265065474558,"lng":-74.01008396812925,"rank":null,"top":[{"rank":1,"name":"Joe's Pizza Broadway"},{"rank":2,"name":"Roma Pizza \u0026 restaurant"},{"rank":3,"name":"Vito's Slices and Ices"}]},{"row":1,"col":3,"lat":40.74265065474558,"lng":-74.0021707,"rank":null,"top":[{"rank":1,"name":"Joe's Pizza Broadway"},{"rank":2,"name":"Vito's Slices and Ices"},{"rank":3,"name":"Roma Pizza \u0026 restaurant"}]},{"row":1,"col":4,"lat":40.74265065474558,"lng":-73.99425743187074,"rank":null,"top":[{"rank":1,"name":"Joe's Pizza Broadway"},{"rank":2,"name":"Vito's Slices and Ices"},{"rank":3,"name":"SIMÒ PIZZA - MIDTOWN"}]},{"row":1,"col":5,"lat":40.74265065474558,"lng":-73.98634416374148,"rank":null,"top":[{"rank":1,"name":"Joe's Pizza Broadway"},{"rank":2,"name":"Vito's Slices and Ices"},{"rank":3,"name":"ANDIAMO PIZZA"}]},{"row":1,"col":6,"lat":40.74265065474558,"lng":-73.9784308956122,"rank":null,"top":[{"rank":1,"name":"Joe's Pizza Broadway"},{"rank":2,"name":"Roma Pizza \u0026 restaurant"},{"rank":3,"name":"Vito's Slices and Ices"}]},{"row":2,"col":0,"lat":40.73665517737279,"lng":-74.02590836478294,"rank":20,"top":[{"rank":1,"name":"Joe's Pizza Broadway"},{"rank":2,"name":"Song' E Napule"},{"rank":3,"name":"L’industrie Pizzeria - West Village"}]},{"row":2,"col":1,"lat":40.73665517737279,"lng":-74.0179958098553,"rank":null,"top":[{"rank":1,"name":"Joe's Pizza Broadway"},{"rank":2,"name":"Rubirosa"},{"rank":3,"name":"Roma Pizza \u0026 restaurant"}]},{"row":2,"col":2,"lat":40.73665517737279,"lng":-74.01008325492764,"rank":null,"top":[{"rank":1,"name":"Joe's Pizza Broadway"},{"rank":2,"name":"Rubirosa"},{"rank":3,"name":"Fermento Pizza NYC"}]},{"row":2,"col":3,"lat":40.73665517737279,"lng":-74.0021707,"rank":null,"top":[{"rank":1,"name":"Joe's Pizza Broadway"},{"rank":2,"name":"Vito's Slices and Ices"},{"rank":3,"name":"Roma Pizza \u0026 restaurant"}]},{"row":2,"col":4,"lat":40.73665517737279,"lng":-73.99425814507235,"rank":null,"top":[{"rank":1,"name":"Joe's Pizza Broadway"},{"rank":2,"name":"Vito's Slices and Ices"},{"rank":3,"name":"Roma Pizza \u0026 restaurant"}]},{"row":2,"col":5,"lat":40.73665517737279,"lng":-73.9863455901447,"rank":null,"top":[{"rank":1,"name":"Joe's Pizza Broadway"},{"rank":2,"name":"Vito's Slices and Ices"},{"rank":3,"name":"Roma Pizza \u0026 restaurant"}]},{"row":2,"col":6,"lat":40.73665517737279,"lng":-73.97843303521705,"rank":null,"top":[{"rank":1,"name":"Joe's Pizza Broadway"},{"rank":2,"name":"Roma Pizza \u0026 restaurant"},{"rank":3,"name":"SIMÒ PIZZA - MIDTOWN"}]},{"row":3,"col":0,"lat":40.7306597,"lng":-74.0259062258236,"rank":null,"top":[{"rank":1,"name":"Joe's Pizza Broadway"},{"rank":2,"name":"Song' E Napule"},{"rank":3,"name":"Roma Pizza \u0026 restaurant"}]},{"row":3,"col":1,"lat":40.7306597,"lng":-74.01799438388241,"rank":null,"top":[{"rank":1,"name":"Joe's Pizza Broadway"},{"rank":2,"name":"Rubirosa"},{"rank":3,"name":"Roma Pizza \u0026 restaurant"}]},{"row":3,"col":2,"lat":40.7306597,"lng":-74.0100825419412,"rank":null,"top":[{"rank":1,"name":"Song' E Napule"},{"rank":2,"name":"Joe's Pizza Broadway"},{"rank":3,"name":"L’industrie Pizzeria - West Village"}]},{"row":3,"col":3,"lat":40.7306597,"lng":-74.0021707,"rank":null,"top":[{"rank":1,"name":"Joe's Pizza Broadway"},{"rank":2,"name":"Rubirosa"},{"rank":3,"name":"Roma Pizza \u0026 restaurant"}]},{"row":3,"col":4,"lat":40.7306597,"lng":-73.99425885805879,"rank":16,"top":[{"rank":1,"name":"L’industrie Pizzeria - West Village"},{"rank":2,"name":"Nolita Pizza"},{"rank":3,"name":"Pizzazz"}]},{"row":3,"col":5,"lat":40.7306597,"lng":-73.98634701611758,"rank":18,"top":[{"rank":1,"name":"Nolita Pizza"},{"rank":2,"name":"L’industrie Pizzeria - West Village"},{"rank":3,"name":"Joe’s Pizza"}]},{"row":3,"col":6,"lat":40.7306597,"lng":-73.97843517417638,"rank":null,"top":[{"rank":1,"name":"Joe's Pizza Broadway"},{"rank":2,"name":"Rubirosa"},{"rank":3,"name":"Song' E Napule"}]},{"row":4,"col":0,"lat":40.724664222627204,"lng":-74.02590408750957,"rank":null,"top":[{"rank":1,"name":"Rubirosa"},{"rank":2,"name":"Song' E Napule"},{"rank":3,"name":"Fermento Pizza NYC"}]},{"row":4,"col":1,"lat":40.724664222627204,"lng":-74.01799295833972,"rank":16,"top":[{"rank":1,"name":"Nolita Pizza"},{"rank":2,"name":"L’industrie Pizzeria - West Village"},{"rank":3,"name":"Joe’s Pizza"}]},{"row":4,"col":2,"lat":40.724664222627204,"lng":-74.01008182916985,"rank":null,"top":[{"rank":1,"name":"Grand Street Pizza"},{"rank":2,"name":"Rubirosa"},{"rank":3,"name":"Song' E Napule"}]},{"row":4,"col":3,"lat":40.724664222627204,"lng":-74.0021707,"rank":20,"top":[{"rank":1,"name":"Song' E Napule"},{"rank":2,"name":"L’industrie Pizzeria - West Village"},{"rank":3,"name":"Rubirosa"}]},{"row":4,"col":4,"lat":40.724664222627204,"lng":-73.99425957083014,"rank":null,"top":[{"rank":1,"name":"Rubirosa"},{"rank":2,"name":"Song' E Napule"},{"rank":3,"name":"Fermento Pizza NYC"}]},{"row":4,"col":5,"lat":40.724664222627204,"lng":-73.98634844166027,"rank":null,"top":[{"rank":1,"name":"Rubirosa"},{"rank":2,"name":"Fermento Pizza NYC"},{"rank":3,"name":"Song' E Napule"}]},{"row":4,"col":6,"lat":40.724664222627204,"lng":-73.97843731249041,"rank":null,"top":[{"rank":1,"name":"L’industrie Pizzeria - West Village"},{"rank":2,"name":"Song' E Napule"},{"rank":3,"name":"Rubirosa"}]},{"row":5,"col":0,"lat":40.71866874525441,"lng":-74.0259019498406,"rank":null,"top":[{"rank":1,"name":"Rubirosa"},{"rank":2,"name":"Song' E Napule"},{"rank":3,"name":"Prince Street Pizza"}]},{"row":5,"col":1,"lat":40.71866874525441,"lng":-74.01799153322706,"rank":null,"top":[{"rank":1,"name":"Grand Street Pizza"},{"rank":2,"name":"Rubirosa"},{"rank":3,"name":"Song' E Napule"}]},{"row":5,"col":2,"lat":40.71866874525441,"lng":-74.01008111661353,"rank":null,"top":[{"rank":1,"name":"Rubirosa"},{"rank":2,"name":"Fermento Pizza NYC"},{"rank":3,"name":"Song' E Napule"}]},{"row":5,"col":3,"lat":40.71866874525441,"lng":-74.0021707,"rank":null,"top":[{"rank":1,"name":"Rubirosa"},{"rank":2,"name":"Song' E Napule"},{"rank":3,"name":"Fermento Pizza NYC"}]},{"row":5,"col":4,"lat":40.71866874525441,"lng":-73.99426028338645,"rank":null,"top":[{"rank":1,"name":"Rubirosa"},{"rank":2,"name":"Song' E Napule"},{"rank":3,"name":"Fermento Pizza NYC"}]},{"row":5,"col":5,"lat":40.71866874525441,"lng":-73.98634986677293,"rank":null,"top":[{"rank":1,"name":"Song' E Napule"},{"rank":2,"name":"L’industrie Pizzeria - West Village"},{"rank":3,"name":"Rubirosa"}]},{"row":5,"col":6,"lat":40.71866874525441,"lng":-73.97843945015939,"rank":null,"top":[{"rank":1,"name":"Song' E Napule"},{"rank":2,"name":"Rubirosa"},{"rank":3,"name":"L’industrie Pizzeria - West Village"}]},{"row":6,"col":0,"lat":40.71267326788162,"lng":-74.02589981281649,"rank":null,"top":[{"rank":1,"name":"Dellarocco's Brick Oven Pizza"},{"rank":2,"name":"The Pizzeria on Pine"},{"rank":3,"name":"Tino's Artisan Pizza Co."}]},{"row":6,"col":1,"lat":40.71267326788162,"lng":-74.01799010854432,"rank":null,"top":[{"rank":1,"name":"Rubirosa"},{"rank":2,"name":"Song' E Napule"},{"rank":3,"name":"Fermento Pizza NYC"}]},{"row":6,"col":2,"lat":40.71267326788162,"lng":-74.01008040427216,"rank":null,"top":[{"rank":1,"name":"Song' E Napule"},{"rank":2,"name":"Rubirosa"},{"rank":3,"name":"Pizza Loves Sauce"}]},{"row":6,"col":3,"lat":40.71267326788162,"lng":-74.0021707,"rank":17,"top":[{"rank":1,"name":"Song' E Napule"},{"rank":2,"name":"L’industrie Pizzeria - West Village"},{"rank":3,"name":"Rubirosa"}]},{"row":6,"col":4,"lat":40.71267326788162,"lng":-73.99426099572783,"rank":null,"top":[{"rank":1,"name":"Song' E Napule"},{"rank":2,"name":"L’industrie Pizzeria - West Village"},{"rank":3,"name":"Rubirosa"}]},{"row":6,"col":5,"lat":40.71267326788162,"lng":-73.98635129145566,"rank":19,"top":[{"rank":1,"name":"Nolita Pizza"},{"rank":2,"name":"L’industrie Pizzeria - West Village"},{"rank":3,"name":"Joe’s Pizza"}]},{"row":6,"col":6,"lat":40.71267326788162,"lng":-73.9784415871835,"rank":15,"top":[{"rank":1,"name":"L’industrie Pizzeria - West Village"},{"rank":2,"name":"Nolita Pizza"},{"rank":3,"name":"Pizzazz"}]}],"competitors":[{"place_id":"ChIJifIePKtZwokRVZ-UdRGkZzs","name":"Joe's Pizza Broadway","top3_points":26,"first_points":25,"ahead_points":26},{"place_id":"ChIJs8MdNo9ZwokRTPUHiArLC-o","name":"Rubirosa","top3_points":22,"first_points":8,"ahead_points":22},{"place_id":"ChIJ04qK9Y1ZwokRgw_VSJz_lAY","name":"Song' E Napule","top3_points":21,"first_points":7,"ahead_points":21},{"place_id":"ChIJ5y1KDFhZwokR5GHmHxnyrms","name":"Roma Pizza \u0026 restaurant","top3_points":20,"first_points":0,"ahead_points":20},{"place_id":"ChIJ92OsaJVZwokRsC54kf-J-3g","name":"L’industrie Pizzeria - West Village","top3_points":13,"first_points":3,"ahead_points":13}],"tones":[{"key":"top","max":3,"label":"1–3","fill":"#34b86f","ink":"#04210f"},{"key":"mid","max":10,"label":"4–10","fill":"#f2b33d","ink":"#2b1a00"},{"key":"low","max":20,"label":"11–20","fill":"#ee6a3c","ink":"#2a0b00"},{"key":"out","max":null,"label":"Not in top 20","fill":"#d6d8de","ink":"#3d4250"}],"mapStyle":"https://tiles.openfreemap.org/styles/positron"};</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/5.24.0/maplibre-gl.js" integrity="sha512-rOFgoUgWaVi69JW1dzBu6PWF9xKW9rxYfY5u2SexFABHhWk0qUWkJoWNz4UuZRMvSXsNZG66+tU5B+HlwWF5kA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+(function () {
+  var data = window.GRID;
+  var $ = function (id) { return document.getElementById(id); };
+  var tones = data.tones;
+  function tone(rank) {
+    if (typeof rank !== "number" || rank < 1) return tones[tones.length - 1];
+    for (var i = 0; i < tones.length - 1; i++) if (rank <= tones[i].max) return tones[i];
+    return tones[tones.length - 1];
+  }
+  var total = data.pointsTotal;
+  var live = data.mode === "live";
+  $("mode").textContent = live ? "Live" : "Test data";
+  if (live) $("mode").classList.add("live");
+  $("keyword").textContent = "\u201c" + data.keyword + "\u201d";
+  $("place").textContent = data.place && data.place.name ? data.place.name : "";
+  var format = data.shape === "square" ? data.size + "\u00d7" + data.size + " grid" : data.shape + " grid, " + data.density + " density";
+  var date = data.completedAt ? new Date(data.completedAt).toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric", timeZone: "UTC" }) : "";
+  $("meta").textContent = [format, data.radiusKm + " km radius", total + " points", date].filter(Boolean).join(" \u00b7 ");
+  $("avg").textContent = data.summary.average_rank === null ? "20+" : data.summary.average_rank.toFixed(1);
+  if (data.summary.average_rank === null) $("avg-label").textContent = "not in the top 20 anywhere";
+  else if (data.summary.found_points < total) $("avg-label").textContent = "average rank where the listing appears (" + data.summary.average_rank_with_misses.toFixed(1) + " counting misses as 21)";
+  $("top3").textContent = data.summary.top3_points + "/" + total;
+  $("found").textContent = data.summary.found_points + "/" + total;
+
+  tones.forEach(function (t) {
+    var li = document.createElement("li");
+    var swatch = document.createElement("i");
+    swatch.style.background = t.fill;
+    li.appendChild(swatch);
+    li.appendChild(document.createTextNode(t.label));
+    $("legend").appendChild(li);
+  });
+
+  var ahead = data.competitors;
+  if (ahead.length === 0) {
+    var none = document.createElement("li");
+    none.className = "empty";
+    none.textContent = "Nobody: the listing is first wherever it appears.";
+    $("competitors").appendChild(none);
+  }
+  ahead.forEach(function (c) {
+    var li = document.createElement("li");
+    var row = document.createElement("div"); row.className = "row";
+    var name = document.createElement("span"); name.className = "name"; name.textContent = c.name; name.title = c.name;
+    var count = document.createElement("span"); count.className = "count"; count.textContent = c.ahead_points + "/" + total + " points";
+    row.appendChild(name); row.appendChild(count);
+    var bar = document.createElement("div"); bar.className = "bar";
+    var fill = document.createElement("span"); fill.style.width = Math.round((c.ahead_points / total) * 100) + "%";
+    bar.appendChild(fill);
+    li.appendChild(row); li.appendChild(bar);
+    $("competitors").appendChild(li);
+  });
+
+  if (!window.maplibregl) { $("map").textContent = "The map library could not load (offline?). The figures on the left are complete."; return; }
+  var map = new maplibregl.Map({ container: "map", style: data.mapStyle, center: [data.points[0].lng, data.points[0].lat], zoom: 12, attributionControl: { compact: false } });
+  map.addControl(new maplibregl.NavigationControl({ showCompass: false }), "top-right");
+
+  var bounds = new maplibregl.LngLatBounds();
+  data.points.forEach(function (p) {
+    var t = tone(p.rank);
+    var label = p.rank === null ? "Not in the top 20" : "Rank " + p.rank;
+    var wrapper = document.createElement("div");
+    wrapper.className = "marker";
+    wrapper.tabIndex = 0;
+    wrapper.setAttribute("role", "button");
+    wrapper.setAttribute("aria-label", label);
+    var dot = document.createElement("div");
+    dot.className = "dot";
+    dot.style.background = t.fill;
+    dot.style.color = t.ink;
+    dot.textContent = p.rank === null ? "20+" : String(p.rank);
+    wrapper.appendChild(dot);
+    var box = document.createElement("div");
+    var head = document.createElement("strong");
+    head.textContent = label + " here";
+    box.appendChild(head);
+    if (p.top.length) {
+      var list = document.createElement("ol");
+      p.top.forEach(function (entry) { var item = document.createElement("li"); item.textContent = entry.name; list.appendChild(item); });
+      box.appendChild(list);
+    }
+    var marker = new maplibregl.Marker({ element: wrapper })
+      .setLngLat([p.lng, p.lat])
+      .setPopup(new maplibregl.Popup({ offset: 18, closeButton: false }).setDOMContent(box))
+      .addTo(map);
+    wrapper.addEventListener("keydown", function (event) {
+      if (event.key === "Enter" || event.key === " ") { event.preventDefault(); marker.togglePopup(); }
+    });
+    bounds.extend([p.lng, p.lat]);
+  });
+  if (data.place && typeof data.place.lat === "number") {
+    var pin = document.createElement("div");
+    pin.className = "center-pin";
+    pin.title = data.place.name || "Listing";
+    new maplibregl.Marker({ element: pin }).setLngLat([data.place.lng, data.place.lat]).addTo(map);
+    bounds.extend([data.place.lng, data.place.lat]);
+  }
+  if (!bounds.isEmpty()) map.fitBounds(bounds, { padding: 48, duration: 0 });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1351 @@
+{
+  "id": "de6a8d92-3d80-48b3-a8ac-37480e07ede6",
+  "object": "grid",
+  "status": "completed",
+  "mode": "live",
+  "source": "api",
+  "place": {
+    "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs",
+    "name": "Joe's Pizza Broadway",
+    "address": "1435 Broadway, New York, NY 10018, United States",
+    "lat": 40.7546795,
+    "lng": -73.9870291
+  },
+  "keyword": "pizza",
+  "shape": "square",
+  "density": null,
+  "size": 7,
+  "rows": 7,
+  "cols": 7,
+  "radius_km": 2,
+  "language": "en",
+  "country": "US",
+  "points_total": 49,
+  "points_charged": 49,
+  "summary": {
+    "average_rank": 1.73,
+    "average_rank_with_misses": 1.73,
+    "top3_points": 42,
+    "found_points": 49
+  },
+  "ranks": [
+    [
+      3,
+      3,
+      2,
+      2,
+      2,
+      5,
+      5
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      4
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1,
+      5,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      4
+    ],
+    [
+      1,
+      1,
+      2,
+      1,
+      1,
+      1,
+      4
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      4
+    ],
+    [
+      3,
+      1,
+      1,
+      1,
+      1,
+      2,
+      1
+    ]
+  ],
+  "points": [
+    {
+      "col": 0,
+      "lat": 40.77266593211838,
+      "lng": -74.01077962564689,
+      "row": 0,
+      "top": [
+        {
+          "name": "Pizza Tower",
+          "rank": 1,
+          "place_id": "ChIJyes2KNpZwokRjak8ZL-F2Mg"
+        },
+        {
+          "name": "Slice & Co Fine Gourmet Brick Oven Pizza, Inc",
+          "rank": 2,
+          "place_id": "ChIJff6wSJRXwokRSFtlYTKZztU"
+        },
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 3,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        }
+      ],
+      "rank": 3
+    },
+    {
+      "col": 1,
+      "lat": 40.77266593211838,
+      "lng": -74.00286278376458,
+      "row": 0,
+      "top": [
+        {
+          "name": "Pizza Tower",
+          "rank": 1,
+          "place_id": "ChIJyes2KNpZwokRjak8ZL-F2Mg"
+        },
+        {
+          "name": "Slice & Co Fine Gourmet Brick Oven Pizza, Inc",
+          "rank": 2,
+          "place_id": "ChIJff6wSJRXwokRSFtlYTKZztU"
+        },
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 3,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        }
+      ],
+      "rank": 3
+    },
+    {
+      "col": 2,
+      "lat": 40.77266593211838,
+      "lng": -73.99494594188229,
+      "row": 0,
+      "top": [
+        {
+          "name": "Previti Pasta & Pizza",
+          "rank": 1,
+          "place_id": "ChIJoWADwAVZwokRlTFyts-7kh8"
+        },
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 2,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "SIMÒ PIZZA - MIDTOWN",
+          "rank": 3,
+          "place_id": "ChIJsxo_CT9ZwokR3i73Z1LaSH0"
+        }
+      ],
+      "rank": 2
+    },
+    {
+      "col": 3,
+      "lat": 40.77266593211838,
+      "lng": -73.9870291,
+      "row": 0,
+      "top": [
+        {
+          "name": "Previti Pasta & Pizza",
+          "rank": 1,
+          "place_id": "ChIJoWADwAVZwokRlTFyts-7kh8"
+        },
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 2,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "Supreme Eats Pizza And Pasta",
+          "rank": 3,
+          "place_id": "ChIJ-VogOvNZwokR4RKXP12YeFI"
+        }
+      ],
+      "rank": 2
+    },
+    {
+      "col": 4,
+      "lat": 40.77266593211838,
+      "lng": -73.97911225811771,
+      "row": 0,
+      "top": [
+        {
+          "name": "Mimi's Pizza (3rd Ave & 86th)",
+          "rank": 1,
+          "place_id": "ChIJcbFFteRZwokR1oVEs064myU"
+        },
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 2,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "LaVista Pizza (2nd Ave)",
+          "rank": 3,
+          "place_id": "ChIJ09mjPJpZwokR3bJj4XzKEkY"
+        }
+      ],
+      "rank": 2
+    },
+    {
+      "col": 5,
+      "lat": 40.77266593211838,
+      "lng": -73.97119541623542,
+      "row": 0,
+      "top": [
+        {
+          "name": "Mimi's Pizza (3rd Ave & 86th)",
+          "rank": 1,
+          "place_id": "ChIJcbFFteRZwokR1oVEs064myU"
+        },
+        {
+          "name": "Surf City Pizzeria 3",
+          "rank": 2,
+          "place_id": "ChIJ4XbIAxhZwokRUMKzR4-26_Q"
+        },
+        {
+          "name": "Previti Pasta & Pizza",
+          "rank": 3,
+          "place_id": "ChIJoWADwAVZwokRlTFyts-7kh8"
+        }
+      ],
+      "rank": 5
+    },
+    {
+      "col": 6,
+      "lat": 40.77266593211838,
+      "lng": -73.96327857435311,
+      "row": 0,
+      "top": [
+        {
+          "name": "Mimi's Pizza (3rd Ave & 86th)",
+          "rank": 1,
+          "place_id": "ChIJcbFFteRZwokR1oVEs064myU"
+        },
+        {
+          "name": "Surf City Pizzeria 3",
+          "rank": 2,
+          "place_id": "ChIJ4XbIAxhZwokRUMKzR4-26_Q"
+        },
+        {
+          "name": "Previti Pasta & Pizza",
+          "rank": 3,
+          "place_id": "ChIJoWADwAVZwokRlTFyts-7kh8"
+        }
+      ],
+      "rank": 5
+    },
+    {
+      "col": 0,
+      "lat": 40.76667045474559,
+      "lng": -74.01077748280707,
+      "row": 1,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "Roma Pizza & restaurant",
+          "rank": 2,
+          "place_id": "ChIJ5y1KDFhZwokR5GHmHxnyrms"
+        },
+        {
+          "name": "Previti Pasta & Pizza",
+          "rank": 3,
+          "place_id": "ChIJoWADwAVZwokRlTFyts-7kh8"
+        }
+      ],
+      "rank": 1
+    },
+    {
+      "col": 1,
+      "lat": 40.76667045474559,
+      "lng": -74.00286135520471,
+      "row": 1,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "SIMÒ PIZZA - MIDTOWN",
+          "rank": 2,
+          "place_id": "ChIJsxo_CT9ZwokR3i73Z1LaSH0"
+        },
+        {
+          "name": "Little Italy Pizza",
+          "rank": 3,
+          "place_id": "ChIJH5boACdZwokRxOeHa1vo00A"
+        }
+      ],
+      "rank": 1
+    },
+    {
+      "col": 2,
+      "lat": 40.76667045474559,
+      "lng": -73.99494522760236,
+      "row": 1,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "SIMÒ PIZZA - MIDTOWN",
+          "rank": 2,
+          "place_id": "ChIJsxo_CT9ZwokR3i73Z1LaSH0"
+        },
+        {
+          "name": "Little Italy Pizza",
+          "rank": 3,
+          "place_id": "ChIJH5boACdZwokRxOeHa1vo00A"
+        }
+      ],
+      "rank": 1
+    },
+    {
+      "col": 3,
+      "lat": 40.76667045474559,
+      "lng": -73.9870291,
+      "row": 1,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "SIMÒ PIZZA - MIDTOWN",
+          "rank": 2,
+          "place_id": "ChIJsxo_CT9ZwokR3i73Z1LaSH0"
+        },
+        {
+          "name": "Little Italy Pizza",
+          "rank": 3,
+          "place_id": "ChIJH5boACdZwokRxOeHa1vo00A"
+        }
+      ],
+      "rank": 1
+    },
+    {
+      "col": 4,
+      "lat": 40.76667045474559,
+      "lng": -73.97911297239764,
+      "row": 1,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "SIMÒ PIZZA - MIDTOWN",
+          "rank": 2,
+          "place_id": "ChIJsxo_CT9ZwokR3i73Z1LaSH0"
+        },
+        {
+          "name": "ANDIAMO PIZZA",
+          "rank": 3,
+          "place_id": "ChIJvxSJw4VZwokRI_KM0rv6Ths"
+        }
+      ],
+      "rank": 1
+    },
+    {
+      "col": 5,
+      "lat": 40.76667045474559,
+      "lng": -73.97119684479529,
+      "row": 1,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "SIMÒ PIZZA - MIDTOWN",
+          "rank": 2,
+          "place_id": "ChIJsxo_CT9ZwokR3i73Z1LaSH0"
+        },
+        {
+          "name": "Little Italy Pizza",
+          "rank": 3,
+          "place_id": "ChIJH5boACdZwokRxOeHa1vo00A"
+        }
+      ],
+      "rank": 1
+    },
+    {
+      "col": 6,
+      "lat": 40.76667045474559,
+      "lng": -73.96328071719293,
+      "row": 1,
+      "top": [
+        {
+          "name": "Soho Pizza",
+          "rank": 1,
+          "place_id": "ChIJucURlwhfwokRcuLCFvPJBXE"
+        },
+        {
+          "name": "Pizza Veloce Astoria",
+          "rank": 2,
+          "place_id": "ChIJRaZpAYBfwokRFDdKMc9vX18"
+        },
+        {
+          "name": "Due Fratelli Sunnyside",
+          "rank": 3,
+          "place_id": "ChIJD4SubABfwokRhHjE8D2Kgf4"
+        }
+      ],
+      "rank": 4
+    },
+    {
+      "col": 0,
+      "lat": 40.760674977372794,
+      "lng": -74.01077534061388,
+      "row": 2,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "SIMÒ PIZZA - MIDTOWN",
+          "rank": 2,
+          "place_id": "ChIJsxo_CT9ZwokR3i73Z1LaSH0"
+        },
+        {
+          "name": "Patsy's Pizzeria Flatiron",
+          "rank": 3,
+          "place_id": "ChIJeZ3ZZnxZwokR8A5ebMhtxKQ"
+        }
+      ],
+      "rank": 1
+    },
+    {
+      "col": 1,
+      "lat": 40.760674977372794,
+      "lng": -74.00285992707592,
+      "row": 2,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "SIMÒ PIZZA - MIDTOWN",
+          "rank": 2,
+          "place_id": "ChIJsxo_CT9ZwokR3i73Z1LaSH0"
+        },
+        {
+          "name": "Little Italy Pizza",
+          "rank": 3,
+          "place_id": "ChIJH5boACdZwokRxOeHa1vo00A"
+        }
+      ],
+      "rank": 1
+    },
+    {
+      "col": 2,
+      "lat": 40.760674977372794,
+      "lng": -73.99494451353796,
+      "row": 2,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "SIMÒ PIZZA - MIDTOWN",
+          "rank": 2,
+          "place_id": "ChIJsxo_CT9ZwokR3i73Z1LaSH0"
+        },
+        {
+          "name": "Little Italy Pizza",
+          "rank": 3,
+          "place_id": "ChIJH5boACdZwokRxOeHa1vo00A"
+        }
+      ],
+      "rank": 1
+    },
+    {
+      "col": 3,
+      "lat": 40.760674977372794,
+      "lng": -73.9870291,
+      "row": 2,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "SIMÒ PIZZA - MIDTOWN",
+          "rank": 2,
+          "place_id": "ChIJsxo_CT9ZwokR3i73Z1LaSH0"
+        },
+        {
+          "name": "Little Italy Pizza",
+          "rank": 3,
+          "place_id": "ChIJH5boACdZwokRxOeHa1vo00A"
+        }
+      ],
+      "rank": 1
+    },
+    {
+      "col": 4,
+      "lat": 40.760674977372794,
+      "lng": -73.97911368646204,
+      "row": 2,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "SIMÒ PIZZA - MIDTOWN",
+          "rank": 2,
+          "place_id": "ChIJsxo_CT9ZwokR3i73Z1LaSH0"
+        },
+        {
+          "name": "Patsy's Pizzeria Flatiron",
+          "rank": 3,
+          "place_id": "ChIJeZ3ZZnxZwokR8A5ebMhtxKQ"
+        }
+      ],
+      "rank": 1
+    },
+    {
+      "col": 5,
+      "lat": 40.760674977372794,
+      "lng": -73.97119827292408,
+      "row": 2,
+      "top": [
+        {
+          "name": "Quality Pizza Co. Midtown",
+          "rank": 1,
+          "place_id": "ChIJgW-n6g1ZwokRwPVvsDWxpMo"
+        },
+        {
+          "name": "Pizzazz",
+          "rank": 2,
+          "place_id": "ChIJ_YYcCABZwokRL3PFUU5PTfs"
+        },
+        {
+          "name": "NY Pizza Suprema",
+          "rank": 3,
+          "place_id": "ChIJjaD94kFZwokR-20CXqlpy_4"
+        }
+      ],
+      "rank": 5
+    },
+    {
+      "col": 6,
+      "lat": 40.760674977372794,
+      "lng": -73.96328285938613,
+      "row": 2,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "SIMÒ PIZZA - MIDTOWN",
+          "rank": 2,
+          "place_id": "ChIJsxo_CT9ZwokR3i73Z1LaSH0"
+        },
+        {
+          "name": "Patsy's Pizzeria Flatiron",
+          "rank": 3,
+          "place_id": "ChIJeZ3ZZnxZwokR8A5ebMhtxKQ"
+        }
+      ],
+      "rank": 1
+    },
+    {
+      "col": 0,
+      "lat": 40.7546795,
+      "lng": -74.01077319906709,
+      "row": 3,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "SIMÒ PIZZA - MIDTOWN",
+          "rank": 2,
+          "place_id": "ChIJsxo_CT9ZwokR3i73Z1LaSH0"
+        },
+        {
+          "name": "Little Italy Pizza",
+          "rank": 3,
+          "place_id": "ChIJH5boACdZwokRxOeHa1vo00A"
+        }
+      ],
+      "rank": 1
+    },
+    {
+      "col": 1,
+      "lat": 40.7546795,
+      "lng": -74.00285849937806,
+      "row": 3,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "SIMÒ PIZZA - MIDTOWN",
+          "rank": 2,
+          "place_id": "ChIJsxo_CT9ZwokR3i73Z1LaSH0"
+        },
+        {
+          "name": "Little Italy Pizza",
+          "rank": 3,
+          "place_id": "ChIJH5boACdZwokRxOeHa1vo00A"
+        }
+      ],
+      "rank": 1
+    },
+    {
+      "col": 2,
+      "lat": 40.7546795,
+      "lng": -73.99494379968903,
+      "row": 3,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "SIMÒ PIZZA - MIDTOWN",
+          "rank": 2,
+          "place_id": "ChIJsxo_CT9ZwokR3i73Z1LaSH0"
+        },
+        {
+          "name": "Little Italy Pizza",
+          "rank": 3,
+          "place_id": "ChIJH5boACdZwokRxOeHa1vo00A"
+        }
+      ],
+      "rank": 1
+    },
+    {
+      "col": 3,
+      "lat": 40.7546795,
+      "lng": -73.9870291,
+      "row": 3,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "SIMÒ PIZZA - MIDTOWN",
+          "rank": 2,
+          "place_id": "ChIJsxo_CT9ZwokR3i73Z1LaSH0"
+        },
+        {
+          "name": "Little Italy Pizza",
+          "rank": 3,
+          "place_id": "ChIJH5boACdZwokRxOeHa1vo00A"
+        }
+      ],
+      "rank": 1
+    },
+    {
+      "col": 4,
+      "lat": 40.7546795,
+      "lng": -73.97911440031098,
+      "row": 3,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "SIMÒ PIZZA - MIDTOWN",
+          "rank": 2,
+          "place_id": "ChIJsxo_CT9ZwokR3i73Z1LaSH0"
+        },
+        {
+          "name": "Il Miglio Brick Oven Pizzeria & Italian Restaurant",
+          "rank": 3,
+          "place_id": "ChIJ79lCrc1YwokR4ZW60HMyniw"
+        }
+      ],
+      "rank": 1
+    },
+    {
+      "col": 5,
+      "lat": 40.7546795,
+      "lng": -73.97119970062194,
+      "row": 3,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "Roma Pizza & restaurant",
+          "rank": 2,
+          "place_id": "ChIJ5y1KDFhZwokR5GHmHxnyrms"
+        },
+        {
+          "name": "Don Antonio",
+          "rank": 3,
+          "place_id": "ChIJ0RWk_A5ZwokR-QEzcuKdpP4"
+        }
+      ],
+      "rank": 1
+    },
+    {
+      "col": 6,
+      "lat": 40.7546795,
+      "lng": -73.96328500093291,
+      "row": 3,
+      "top": [
+        {
+          "name": "Soho Pizza",
+          "rank": 1,
+          "place_id": "ChIJucURlwhfwokRcuLCFvPJBXE"
+        },
+        {
+          "name": "Pizza Veloce Astoria",
+          "rank": 2,
+          "place_id": "ChIJRaZpAYBfwokRFDdKMc9vX18"
+        },
+        {
+          "name": "Due Fratelli Sunnyside",
+          "rank": 3,
+          "place_id": "ChIJD4SubABfwokRhHjE8D2Kgf4"
+        }
+      ],
+      "rank": 4
+    },
+    {
+      "col": 0,
+      "lat": 40.74868402262721,
+      "lng": -74.01077105816647,
+      "row": 4,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "SIMÒ PIZZA - MIDTOWN",
+          "rank": 2,
+          "place_id": "ChIJsxo_CT9ZwokR3i73Z1LaSH0"
+        },
+        {
+          "name": "Little Italy Pizza",
+          "rank": 3,
+          "place_id": "ChIJH5boACdZwokRxOeHa1vo00A"
+        }
+      ],
+      "rank": 1
+    },
+    {
+      "col": 1,
+      "lat": 40.74868402262721,
+      "lng": -74.00285707211098,
+      "row": 4,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "SIMÒ PIZZA - MIDTOWN",
+          "rank": 2,
+          "place_id": "ChIJsxo_CT9ZwokR3i73Z1LaSH0"
+        },
+        {
+          "name": "Little Italy Pizza",
+          "rank": 3,
+          "place_id": "ChIJH5boACdZwokRxOeHa1vo00A"
+        }
+      ],
+      "rank": 1
+    },
+    {
+      "col": 2,
+      "lat": 40.74868402262721,
+      "lng": -73.99494308605549,
+      "row": 4,
+      "top": [
+        {
+          "name": "Roma Pizza & restaurant",
+          "rank": 1,
+          "place_id": "ChIJ5y1KDFhZwokR5GHmHxnyrms"
+        },
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 2,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "Vito's Slices and Ices",
+          "rank": 3,
+          "place_id": "ChIJn_KJsVhZwokRnjqlCrxKvGE"
+        }
+      ],
+      "rank": 2
+    },
+    {
+      "col": 3,
+      "lat": 40.74868402262721,
+      "lng": -73.9870291,
+      "row": 4,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "SIMÒ PIZZA - MIDTOWN",
+          "rank": 2,
+          "place_id": "ChIJsxo_CT9ZwokR3i73Z1LaSH0"
+        },
+        {
+          "name": "Patsy's Pizzeria Flatiron",
+          "rank": 3,
+          "place_id": "ChIJeZ3ZZnxZwokR8A5ebMhtxKQ"
+        }
+      ],
+      "rank": 1
+    },
+    {
+      "col": 4,
+      "lat": 40.74868402262721,
+      "lng": -73.97911511394452,
+      "row": 4,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "SIMÒ PIZZA - MIDTOWN",
+          "rank": 2,
+          "place_id": "ChIJsxo_CT9ZwokR3i73Z1LaSH0"
+        },
+        {
+          "name": "Little Italy Pizza",
+          "rank": 3,
+          "place_id": "ChIJH5boACdZwokRxOeHa1vo00A"
+        }
+      ],
+      "rank": 1
+    },
+    {
+      "col": 5,
+      "lat": 40.74868402262721,
+      "lng": -73.97120112788902,
+      "row": 4,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "SIMÒ PIZZA - MIDTOWN",
+          "rank": 2,
+          "place_id": "ChIJsxo_CT9ZwokR3i73Z1LaSH0"
+        },
+        {
+          "name": "Little Italy Pizza",
+          "rank": 3,
+          "place_id": "ChIJH5boACdZwokRxOeHa1vo00A"
+        }
+      ],
+      "rank": 1
+    },
+    {
+      "col": 6,
+      "lat": 40.74868402262721,
+      "lng": -73.96328714183353,
+      "row": 4,
+      "top": [
+        {
+          "name": "Soho Pizza",
+          "rank": 1,
+          "place_id": "ChIJucURlwhfwokRcuLCFvPJBXE"
+        },
+        {
+          "name": "Pizza Veloce Astoria",
+          "rank": 2,
+          "place_id": "ChIJRaZpAYBfwokRFDdKMc9vX18"
+        },
+        {
+          "name": "Due Fratelli Sunnyside",
+          "rank": 3,
+          "place_id": "ChIJD4SubABfwokRhHjE8D2Kgf4"
+        }
+      ],
+      "rank": 4
+    },
+    {
+      "col": 0,
+      "lat": 40.74268854525442,
+      "lng": -74.01076891791182,
+      "row": 5,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "SIMÒ PIZZA - MIDTOWN",
+          "rank": 2,
+          "place_id": "ChIJsxo_CT9ZwokR3i73Z1LaSH0"
+        },
+        {
+          "name": "Little Italy Pizza",
+          "rank": 3,
+          "place_id": "ChIJH5boACdZwokRxOeHa1vo00A"
+        }
+      ],
+      "rank": 1
+    },
+    {
+      "col": 1,
+      "lat": 40.74268854525442,
+      "lng": -74.00285564527455,
+      "row": 5,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "SIMÒ PIZZA - MIDTOWN",
+          "rank": 2,
+          "place_id": "ChIJsxo_CT9ZwokR3i73Z1LaSH0"
+        },
+        {
+          "name": "Little Italy Pizza",
+          "rank": 3,
+          "place_id": "ChIJH5boACdZwokRxOeHa1vo00A"
+        }
+      ],
+      "rank": 1
+    },
+    {
+      "col": 2,
+      "lat": 40.74268854525442,
+      "lng": -73.99494237263727,
+      "row": 5,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "SIMÒ PIZZA - MIDTOWN",
+          "rank": 2,
+          "place_id": "ChIJsxo_CT9ZwokR3i73Z1LaSH0"
+        },
+        {
+          "name": "Little Italy Pizza",
+          "rank": 3,
+          "place_id": "ChIJH5boACdZwokRxOeHa1vo00A"
+        }
+      ],
+      "rank": 1
+    },
+    {
+      "col": 3,
+      "lat": 40.74268854525442,
+      "lng": -73.9870291,
+      "row": 5,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "SIMÒ PIZZA - MIDTOWN",
+          "rank": 2,
+          "place_id": "ChIJsxo_CT9ZwokR3i73Z1LaSH0"
+        },
+        {
+          "name": "Little Italy Pizza",
+          "rank": 3,
+          "place_id": "ChIJH5boACdZwokRxOeHa1vo00A"
+        }
+      ],
+      "rank": 1
+    },
+    {
+      "col": 4,
+      "lat": 40.74268854525442,
+      "lng": -73.97911582736273,
+      "row": 5,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "SIMÒ PIZZA - MIDTOWN",
+          "rank": 2,
+          "place_id": "ChIJsxo_CT9ZwokR3i73Z1LaSH0"
+        },
+        {
+          "name": "Patsy's Pizzeria Flatiron",
+          "rank": 3,
+          "place_id": "ChIJeZ3ZZnxZwokR8A5ebMhtxKQ"
+        }
+      ],
+      "rank": 1
+    },
+    {
+      "col": 5,
+      "lat": 40.74268854525442,
+      "lng": -73.97120255472545,
+      "row": 5,
+      "top": [
+        {
+          "name": "Pizza Veloce Astoria",
+          "rank": 1,
+          "place_id": "ChIJRaZpAYBfwokRFDdKMc9vX18"
+        },
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 2,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "SIMÒ PIZZA - MIDTOWN",
+          "rank": 3,
+          "place_id": "ChIJsxo_CT9ZwokR3i73Z1LaSH0"
+        }
+      ],
+      "rank": 2
+    },
+    {
+      "col": 6,
+      "lat": 40.74268854525442,
+      "lng": -73.96328928208818,
+      "row": 5,
+      "top": [
+        {
+          "name": "Soho Pizza",
+          "rank": 1,
+          "place_id": "ChIJucURlwhfwokRcuLCFvPJBXE"
+        },
+        {
+          "name": "Pizza Veloce Astoria",
+          "rank": 2,
+          "place_id": "ChIJRaZpAYBfwokRFDdKMc9vX18"
+        },
+        {
+          "name": "Due Fratelli Sunnyside",
+          "rank": 3,
+          "place_id": "ChIJD4SubABfwokRhHjE8D2Kgf4"
+        }
+      ],
+      "rank": 4
+    },
+    {
+      "col": 0,
+      "lat": 40.736693067881625,
+      "lng": -74.0107667783029,
+      "row": 6,
+      "top": [
+        {
+          "name": "Pizza Loves Sauce",
+          "rank": 1,
+          "place_id": "ChIJ52tvBGhZwokROhzPBm3wPrU"
+        },
+        {
+          "name": "Fermento Pizza NYC",
+          "rank": 2,
+          "place_id": "ChIJsyU-TQBZwokRi5heLBtXWvA"
+        },
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 3,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        }
+      ],
+      "rank": 3
+    },
+    {
+      "col": 1,
+      "lat": 40.736693067881625,
+      "lng": -74.00285421886859,
+      "row": 6,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "SIMÒ PIZZA - MIDTOWN",
+          "rank": 2,
+          "place_id": "ChIJsxo_CT9ZwokR3i73Z1LaSH0"
+        },
+        {
+          "name": "Little Italy Pizza",
+          "rank": 3,
+          "place_id": "ChIJH5boACdZwokRxOeHa1vo00A"
+        }
+      ],
+      "rank": 1
+    },
+    {
+      "col": 2,
+      "lat": 40.736693067881625,
+      "lng": -73.9949416594343,
+      "row": 6,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "SIMÒ PIZZA - MIDTOWN",
+          "rank": 2,
+          "place_id": "ChIJsxo_CT9ZwokR3i73Z1LaSH0"
+        },
+        {
+          "name": "Little Italy Pizza",
+          "rank": 3,
+          "place_id": "ChIJH5boACdZwokRxOeHa1vo00A"
+        }
+      ],
+      "rank": 1
+    },
+    {
+      "col": 3,
+      "lat": 40.736693067881625,
+      "lng": -73.9870291,
+      "row": 6,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "SIMÒ PIZZA - MIDTOWN",
+          "rank": 2,
+          "place_id": "ChIJsxo_CT9ZwokR3i73Z1LaSH0"
+        },
+        {
+          "name": "Little Italy Pizza",
+          "rank": 3,
+          "place_id": "ChIJH5boACdZwokRxOeHa1vo00A"
+        }
+      ],
+      "rank": 1
+    },
+    {
+      "col": 4,
+      "lat": 40.736693067881625,
+      "lng": -73.9791165405657,
+      "row": 6,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "SIMÒ PIZZA - MIDTOWN",
+          "rank": 2,
+          "place_id": "ChIJsxo_CT9ZwokR3i73Z1LaSH0"
+        },
+        {
+          "name": "Patsy's Pizzeria Flatiron",
+          "rank": 3,
+          "place_id": "ChIJeZ3ZZnxZwokR8A5ebMhtxKQ"
+        }
+      ],
+      "rank": 1
+    },
+    {
+      "col": 5,
+      "lat": 40.736693067881625,
+      "lng": -73.97120398113141,
+      "row": 6,
+      "top": [
+        {
+          "name": "Pizza Veloce Astoria",
+          "rank": 1,
+          "place_id": "ChIJRaZpAYBfwokRFDdKMc9vX18"
+        },
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 2,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "SIMÒ PIZZA - MIDTOWN",
+          "rank": 3,
+          "place_id": "ChIJsxo_CT9ZwokR3i73Z1LaSH0"
+        }
+      ],
+      "rank": 2
+    },
+    {
+      "col": 6,
+      "lat": 40.736693067881625,
+      "lng": -73.96329142169711,
+      "row": 6,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "Soho Pizza",
+          "rank": 2,
+          "place_id": "ChIJucURlwhfwokRcuLCFvPJBXE"
+        },
+        {
+          "name": "Sotto Le Stelle",
+          "rank": 3,
+          "place_id": "ChIJPWbd4dhewokRPpXxkpzYhEc"
+        }
+      ],
+      "rank": 1
+    }
+  ],
+  "competitors": [
+    {
+      "place_id": "ChIJsxo_CT9ZwokR3i73Z1LaSH0",
+      "name": "SIMÒ PIZZA - MIDTOWN",
+      "top3_points": 33,
+      "first_points": 0,
+      "ahead_points": 0
+    },
+    {
+      "place_id": "ChIJH5boACdZwokRxOeHa1vo00A",
+      "name": "Little Italy Pizza",
+      "top3_points": 22,
+      "first_points": 0,
+      "ahead_points": 0
+    },
+    {
+      "place_id": "ChIJRaZpAYBfwokRFDdKMc9vX18",
+      "name": "Pizza Veloce Astoria",
+      "top3_points": 6,
+      "first_points": 2,
+      "ahead_points": 6
+    },
+    {
+      "place_id": "ChIJeZ3ZZnxZwokR8A5ebMhtxKQ",
+      "name": "Patsy's Pizzeria Flatiron",
+      "top3_points": 6,
+      "first_points": 0,
+      "ahead_points": 0
+    },
+    {
+      "place_id": "ChIJucURlwhfwokRcuLCFvPJBXE",
+      "name": "Soho Pizza",
+      "top3_points": 5,
+      "first_points": 4,
+      "ahead_points": 4
+    },
+    {
+      "place_id": "ChIJoWADwAVZwokRlTFyts-7kh8",
+      "name": "Previti Pasta & Pizza",
+      "top3_points": 5,
+      "first_points": 2,
+      "ahead_points": 4
+    },
+    {
+      "place_id": "ChIJD4SubABfwokRhHjE8D2Kgf4",
+      "name": "Due Fratelli Sunnyside",
+      "top3_points": 4,
+      "first_points": 0,
+      "ahead_points": 4
+    },
+    {
+      "place_id": "ChIJcbFFteRZwokR1oVEs064myU",
+      "name": "Mimi's Pizza (3rd Ave & 86th)",
+      "top3_points": 3,
+      "first_points": 3,
+      "ahead_points": 3
+    },
+    {
+      "place_id": "ChIJ5y1KDFhZwokR5GHmHxnyrms",
+      "name": "Roma Pizza & restaurant",
+      "top3_points": 3,
+      "first_points": 1,
+      "ahead_points": 1
+    },
+    {
+      "place_id": "ChIJyes2KNpZwokRjak8ZL-F2Mg",
+      "name": "Pizza Tower",
+      "top3_points": 2,
+      "first_points": 2,
+      "ahead_points": 2
+    }
+  ],
+  "previous": null,
+  "error": null,
+  "webhook": null,
+  "created_at": "2026-10-17T18:40:02.996587+00:00",
+  "completed_at": "2026-10-17T18:40:05.134+00:00"
+}

@@ -1,0 +1,433 @@
+{
+  "id": "f795187d-dc30-451e-b351-cb9f7c059d36",
+  "object": "grid",
+  "status": "completed",
+  "mode": "test",
+  "source": "api",
+  "place": {
+    "place_id": "test_place",
+    "name": "Joe's Pizza <b>NYC</b>",
+    "address": null,
+    "lat": 40.76,
+    "lng": -73.98
+  },
+  "keyword": "pizza",
+  "shape": "square",
+  "density": null,
+  "size": 3,
+  "rows": 3,
+  "cols": 3,
+  "radius_km": 3.5,
+  "language": "fr",
+  "country": null,
+  "points_total": 9,
+  "points_charged": 0,
+  "summary": {
+    "average_rank": 6.71,
+    "average_rank_with_misses": 8.67,
+    "top3_points": 3,
+    "found_points": 7
+  },
+  "ranks": [
+    [
+      1,
+      4,
+      null
+    ],
+    [
+      2,
+      12,
+      5
+    ],
+    [
+      3,
+      null,
+      20
+    ]
+  ],
+  "points": [
+    {
+      "row": 0,
+      "col": 0,
+      "lat": 40.75,
+      "lng": -73.99,
+      "rank": 1,
+      "top": [
+        {
+          "rank": 1,
+          "name": "Pizza, \"Best\" & Co",
+          "place_id": "a"
+        },
+        {
+          "rank": 2,
+          "name": "</script><img src=x onerror=alert(1)>",
+          "place_id": "b"
+        },
+        {
+          "rank": 3,
+          "name": "Third",
+          "place_id": "c"
+        }
+      ]
+    },
+    {
+      "row": 0,
+      "col": 1,
+      "lat": 40.75,
+      "lng": -73.97999999999999,
+      "rank": 4,
+      "top": [
+        {
+          "rank": 1,
+          "name": "Pizza, \"Best\" & Co",
+          "place_id": "a"
+        },
+        {
+          "rank": 2,
+          "name": "</script><img src=x onerror=alert(1)>",
+          "place_id": "b"
+        },
+        {
+          "rank": 3,
+          "name": "Third",
+          "place_id": "c"
+        }
+      ]
+    },
+    {
+      "row": 0,
+      "col": 2,
+      "lat": 40.75,
+      "lng": -73.97,
+      "rank": null,
+      "top": [
+        {
+          "rank": 1,
+          "name": "Pizza, \"Best\" & Co",
+          "place_id": "a"
+        },
+        {
+          "rank": 2,
+          "name": "</script><img src=x onerror=alert(1)>",
+          "place_id": "b"
+        },
+        {
+          "rank": 3,
+          "name": "Third",
+          "place_id": "c"
+        }
+      ]
+    },
+    {
+      "row": 1,
+      "col": 0,
+      "lat": 40.76,
+      "lng": -73.99,
+      "rank": 2,
+      "top": [
+        {
+          "rank": 1,
+          "name": "Pizza, \"Best\" & Co",
+          "place_id": "a"
+        },
+        {
+          "rank": 2,
+          "name": "</script><img src=x onerror=alert(1)>",
+          "place_id": "b"
+        },
+        {
+          "rank": 3,
+          "name": "Third",
+          "place_id": "c"
+        }
+      ]
+    },
+    {
+      "row": 1,
+      "col": 1,
+      "lat": 40.76,
+      "lng": -73.97999999999999,
+      "rank": 12,
+      "top": [
+        {
+          "rank": 1,
+          "name": "Pizza, \"Best\" & Co",
+          "place_id": "a"
+        },
+        {
+          "rank": 2,
+          "name": "</script><img src=x onerror=alert(1)>",
+          "place_id": "b"
+        },
+        {
+          "rank": 3,
+          "name": "Third",
+          "place_id": "c"
+        }
+      ]
+    },
+    {
+      "row": 1,
+      "col": 2,
+      "lat": 40.76,
+      "lng": -73.97,
+      "rank": 5,
+      "top": [
+        {
+          "rank": 1,
+          "name": "Pizza, \"Best\" & Co",
+          "place_id": "a"
+        },
+        {
+          "rank": 2,
+          "name": "</script><img src=x onerror=alert(1)>",
+          "place_id": "b"
+        },
+        {
+          "rank": 3,
+          "name": "Third",
+          "place_id": "c"
+        }
+      ]
+    },
+    {
+      "row": 2,
+      "col": 0,
+      "lat": 40.77,
+      "lng": -73.99,
+      "rank": 3,
+      "top": [
+        {
+          "rank": 1,
+          "name": "Pizza, \"Best\" & Co",
+          "place_id": "a"
+        },
+        {
+          "rank": 2,
+          "name": "</script><img src=x onerror=alert(1)>",
+          "place_id": "b"
+        },
+        {
+          "rank": 3,
+          "name": "Third",
+          "place_id": "c"
+        }
+      ]
+    },
+    {
+      "row": 2,
+      "col": 1,
+      "lat": 40.77,
+      "lng": -73.97999999999999,
+      "rank": null,
+      "top": [
+        {
+          "rank": 1,
+          "name": "Pizza, \"Best\" & Co",
+          "place_id": "a"
+        },
+        {
+          "rank": 2,
+          "name": "</script><img src=x onerror=alert(1)>",
+          "place_id": "b"
+        },
+        {
+          "rank": 3,
+          "name": "Third",
+          "place_id": "c"
+        }
+      ]
+    },
+    {
+      "row": 2,
+      "col": 2,
+      "lat": 40.77,
+      "lng": -73.97,
+      "rank": 20,
+      "top": [
+        {
+          "rank": 1,
+          "name": "Pizza, \"Best\" & Co",
+          "place_id": "a"
+        },
+        {
+          "rank": 2,
+          "name": "</script><img src=x onerror=alert(1)>",
+          "place_id": "b"
+        },
+        {
+          "rank": 3,
+          "name": "Third",
+          "place_id": "c"
+        }
+      ]
+    }
+  ],
+  "competitors": [
+    {
+      "place_id": "a",
+      "name": "Pizza, \"Best\" & Co",
+      "top3_points": 9,
+      "first_points": 6,
+      "ahead_points": 5
+    },
+    {
+      "place_id": "c",
+      "name": "Third",
+      "top3_points": 2,
+      "first_points": 0,
+      "ahead_points": 0
+    }
+  ],
+  "previous": {
+    "grid_id": "28c47d2b-9a3a-4e64-92eb-c8c74810c9c6",
+    "created_at": "2026-10-17T18:35:20.094893+00:00",
+    "average_rank": 11.49,
+    "top3_points": 7,
+    "found_points": 49,
+    "changes": {
+      "average_rank": 0,
+      "top3_points": 0,
+      "found_points": 0
+    },
+    "ranks": [
+      [
+        17,
+        17,
+        17,
+        16,
+        17,
+        17,
+        17
+      ],
+      [
+        16,
+        8,
+        9,
+        8,
+        9,
+        9,
+        17
+      ],
+      [
+        16,
+        9,
+        4,
+        4,
+        3,
+        8,
+        17
+      ],
+      [
+        17,
+        8,
+        3,
+        2,
+        3,
+        9,
+        16
+      ],
+      [
+        16,
+        9,
+        3,
+        3,
+        3,
+        9,
+        17
+      ],
+      [
+        16,
+        8,
+        8,
+        9,
+        8,
+        9,
+        16
+      ],
+      [
+        17,
+        16,
+        17,
+        17,
+        16,
+        16,
+        17
+      ]
+    ],
+    "rank_changes": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "points": {
+      "improved": 0,
+      "worsened": 0,
+      "unchanged": 49
+    }
+  },
+  "error": null,
+  "webhook": null,
+  "created_at": "2026-10-17T18:36:24.079546+00:00",
+  "completed_at": "2026-10-17T18:36:25.852+00:00"
+}

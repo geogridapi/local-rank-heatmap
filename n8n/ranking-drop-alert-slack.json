@@ -1,0 +1,515 @@
+{
+  "name": "Get a Slack alert when a Google Maps ranking drops with GeoGridAPI",
+  "nodes": [
+    {
+      "id": "fcc3fe92-4efb-59ec-8d44-076f40c40882",
+      "name": "Overview",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -520,
+        -180
+      ],
+      "parameters": {
+        "content": "## Slack alert when a Google Maps ranking drops\n\nThis workflow measures a business on Google Maps for a keyword every week with a GeoGridAPI geo-grid and posts in Slack only when the ranking gets worse: a higher average rank, fewer points in the top 3, or fewer points in the top 20. Quiet weeks stay quiet.\n\n### How it works\n1. The schedule starts the workflow every Monday at 07:30.\n2. **Run geo-grid** measures the business on a grid around it; the workflow checks it every 20 seconds until it is completed. A failed grid stops with an error and is refunded.\n3. GeoGridAPI returns the change since the previous grid of the same map (same listing, keyword, size and radius).\n4. **Compare with last grid** checks it against your thresholds. The first run only records a baseline.\n5. **Alert Slack** posts the old and new figures and who ranks ahead.\n\n### Setup\n1. Create a free account on [geogridapi.io](https://geogridapi.io) (500 free credits) and an API key.\n2. Add a **Header Auth** credential named `GeoGridAPI key`: name `Authorization`, value `Bearer gga_live_...`. Select it in the two HTTP Request nodes.\n3. Connect Slack and pick the channel in **Alert Slack**.\n4. Fill in **Settings**: business (\"name, city\"), keyword, grid size, radius, and the thresholds `rankDrop` (places, default 1), `top3Drop` and `foundDrop` (points, defaults 3 and 5).\n\n### Customization tips\n- Cost: 1 credit per point, 49 credits a week for a 7 x 7 grid.\n- Run it daily by changing the schedule; keep the same size and radius so the grids stay comparable.",
+        "width": 460,
+        "height": 800
+      }
+    },
+    {
+      "id": "4378aa41-f829-5b88-b49d-5d6a874e5c98",
+      "name": "Section: schedule and settings",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -20,
+        120
+      ],
+      "parameters": {
+        "content": "## 1. When and what to watch",
+        "width": 460,
+        "height": 340,
+        "color": 7
+      }
+    },
+    {
+      "id": "a1fb532b-8dd4-5fc0-9844-0f885e92c0cc",
+      "name": "Section: measure",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        480,
+        120
+      ],
+      "parameters": {
+        "content": "## 2. Measure the grid\nChecks it every 20 seconds until it is done (20 checks at most).",
+        "width": 1300,
+        "height": 340,
+        "color": 7
+      }
+    },
+    {
+      "id": "de4db071-4ef9-5f20-9027-e28b1922d632",
+      "name": "Section: alert",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1820,
+        120
+      ],
+      "parameters": {
+        "content": "## 3. Alert only on a drop\nCompares with the previous grid of the same map.",
+        "width": 740,
+        "height": 340,
+        "color": 7
+      }
+    },
+    {
+      "id": "1cffa7ba-5c91-5bc1-be89-4a35dccd689f",
+      "name": "Every Monday 07:30",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        40,
+        300
+      ],
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "weeks",
+              "weeksInterval": 1,
+              "triggerAtDay": [
+                1
+              ],
+              "triggerAtHour": 7,
+              "triggerAtMinute": 30
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "a076e7ea-2092-582d-be67-6567dc138306",
+      "name": "Settings",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        260,
+        300
+      ],
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "49699ef8-8b10-5688-a0f6-165c43b8ef6b",
+              "name": "business",
+              "type": "string",
+              "value": "Joe's Pizza Broadway, New York"
+            },
+            {
+              "id": "807f2f2a-e2f0-5f62-b6b0-84aba853d755",
+              "name": "keyword",
+              "type": "string",
+              "value": "pizza"
+            },
+            {
+              "id": "b17bf0ce-2a79-5ff8-874b-f7ff5dca526d",
+              "name": "gridSize",
+              "type": "number",
+              "value": 7
+            },
+            {
+              "id": "ffaf81aa-2bbf-5dbb-9ad2-2bd0ecb40ca2",
+              "name": "radiusKm",
+              "type": "number",
+              "value": 2
+            },
+            {
+              "id": "3c71b5ea-5b21-595d-aff5-ec2ef15f315b",
+              "name": "language",
+              "type": "string",
+              "value": "en"
+            },
+            {
+              "id": "d6f7a691-f5e5-50b1-8365-d832af53e4d2",
+              "name": "rankDrop",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "id": "9ff601cb-dbc0-529d-9716-fa8ca0af6f80",
+              "name": "top3Drop",
+              "type": "number",
+              "value": 3
+            },
+            {
+              "id": "5582638d-21a6-5352-b4e3-10893dbf2087",
+              "name": "foundDrop",
+              "type": "number",
+              "value": 5
+            }
+          ]
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "46a3ddda-6f0d-5008-a3a6-1718f3eb18b1",
+      "name": "Run geo-grid",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        540,
+        300
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.geogridapi.io/v1/grids",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Idempotency-Key",
+              "value": "=n8n-{{ $workflow.id }}-{{ $execution.id }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ query: $json.business, keyword: $json.keyword, size: $json.gridSize, radius_km: $json.radiusKm, language: $json.language }) }}",
+        "options": {}
+      },
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "geogridapi-key",
+          "name": "GeoGridAPI key"
+        }
+      },
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000
+    },
+    {
+      "id": "c5532c61-54c6-506b-9a76-ea288ea781e8",
+      "name": "Wait 20 seconds",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        760,
+        300
+      ],
+      "parameters": {
+        "resume": "timeInterval",
+        "amount": 20,
+        "unit": "seconds"
+      },
+      "webhookId": "c5fbaa70-180b-5a7f-a4f5-d6799c4b155b"
+    },
+    {
+      "id": "5883f06d-1a19-54c3-94e4-62769579e7e1",
+      "name": "Get grid",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        980,
+        300
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "=https://api.geogridapi.io/v1/grids/{{ $('Run geo-grid').first().json.id }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {}
+      },
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "geogridapi-key",
+          "name": "GeoGridAPI key"
+        }
+      },
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000
+    },
+    {
+      "id": "3454b619-bfa1-5f85-a0ee-5b3c2c101ffa",
+      "name": "Finished?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1200,
+        300
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "ad0b57aa-cfdb-5975-a28a-d7a82334cb0e",
+              "leftValue": "={{ ['completed', 'failed'].includes($json.status) || $runIndex >= 19 }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ]
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "65a8bde3-ee36-534b-9cfb-cb4490e12c8c",
+      "name": "Completed?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1420,
+        200
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "b0e41f55-5ab4-5a02-a2de-3b906298e362",
+              "leftValue": "={{ $json.status === 'completed' }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ]
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "8ed40107-d39e-511e-89cc-daeb5c1e0eff",
+      "name": "Stop: grid not completed",
+      "type": "n8n-nodes-base.stopAndError",
+      "typeVersion": 1,
+      "position": [
+        1640,
+        360
+      ],
+      "parameters": {
+        "errorMessage": "=Grid {{ $json.id }} ended as \"{{ $json.status }}\": {{ (typeof $json.error === 'string' ? $json.error : $json.error?.message) ?? 'still running after 20 checks, see it in the GeoGridAPI console' }}. A failed grid is refunded automatically."
+      }
+    },
+    {
+      "id": "f5de4510-a248-520d-8030-141b678b121c",
+      "name": "Compare with last grid",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1880,
+        300
+      ],
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "// Compares with the previous grid of the same map (same listing, keyword, size and radius).\nconst settings = $('Settings').first().json;\nconst grid = $json;\nconst { summary, previous, points_total: total } = grid;\n\n// Names come from Google Maps: escape them before putting them in HTML or Slack markup.\nconst escape = (text) => String(text ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');\nconst ahead = (grid.competitors || [])\n  .filter((c) => c.ahead_points > 0)\n  .sort((a, b) => b.ahead_points - a.ahead_points)\n  .slice(0, 3)\n  .map((c) => `${escape(c.name)} (${c.ahead_points} points)`)\n  .join(', ') || 'nobody';\n\nconst reasons = [];\nif (previous) {\n  const { changes } = previous;\n  if (previous.average_rank !== null && summary.average_rank === null) reasons.push('no longer in the top 20 anywhere');\n  if (changes.average_rank !== null && changes.average_rank >= settings.rankDrop) reasons.push(`average rank +${changes.average_rank}`);\n  if (changes.top3_points <= -settings.top3Drop) reasons.push(`${-changes.top3_points} fewer points in the top 3`);\n  if (changes.found_points <= -settings.foundDrop) reasons.push(`${-changes.found_points} fewer points in the top 20`);\n}\n\nconst text = [\n  `:chart_with_downwards_trend: *${escape(grid.place.name)}* dropped on Google Maps for “${escape(grid.keyword)}”: ${reasons.join(', ')}.`,\n  `Average rank where found: ${previous?.average_rank ?? '20+'} → *${summary.average_rank ?? '20+'}*`,\n  `Top 3: ${previous?.top3_points ?? 0} → *${summary.top3_points}* of ${total} points`,\n  `Top 20: ${previous?.found_points ?? 0} → *${summary.found_points}* of ${total} points`,\n  `Ranking ahead most often: ${ahead}`,\n  `Grid ${grid.id}, measured with GeoGridAPI.`,\n].join('\\n');\n\nreturn { json: { ...grid, dropped: reasons.length > 0, reasons, text } };"
+      }
+    },
+    {
+      "id": "c614b0b4-fafb-5a28-8ec7-da95d9798a52",
+      "name": "Ranking dropped?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        2100,
+        300
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "1baf5aa1-d689-5f7f-af60-ec57dab536f5",
+              "leftValue": "={{ $json.dropped }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ]
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "39664716-3e9e-52fe-a875-5f00b3a944e0",
+      "name": "Alert Slack",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.3,
+      "position": [
+        2320,
+        240
+      ],
+      "parameters": {
+        "select": "channel",
+        "channelId": {
+          "__rl": true,
+          "mode": "name",
+          "value": "local-seo"
+        },
+        "text": "={{ $json.text }}",
+        "otherOptions": {}
+      },
+      "credentials": {
+        "slackApi": {
+          "id": "slack-account",
+          "name": "Slack account"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Every Monday 07:30": {
+      "main": [
+        [
+          {
+            "node": "Settings",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Settings": {
+      "main": [
+        [
+          {
+            "node": "Run geo-grid",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Run geo-grid": {
+      "main": [
+        [
+          {
+            "node": "Wait 20 seconds",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait 20 seconds": {
+      "main": [
+        [
+          {
+            "node": "Get grid",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get grid": {
+      "main": [
+        [
+          {
+            "node": "Finished?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Finished?": {
+      "main": [
+        [
+          {
+            "node": "Completed?",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Wait 20 seconds",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Completed?": {
+      "main": [
+        [
+          {
+            "node": "Compare with last grid",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Stop: grid not completed",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Compare with last grid": {
+      "main": [
+        [
+          {
+            "node": "Ranking dropped?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ranking dropped?": {
+      "main": [
+        [
+          {
+            "node": "Alert Slack",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "meta": {
+    "templateCredsSetupCompleted": false
+  }
+}

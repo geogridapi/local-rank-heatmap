@@ -1,0 +1,1351 @@
+{
+  "id": "fac0b7dd-0dae-4a51-859e-2c31610fd8d5",
+  "object": "grid",
+  "status": "completed",
+  "mode": "live",
+  "source": "api",
+  "place": {
+    "place_id": "ChIJ8Q2WSpJZwokRQz-bYYgEskM",
+    "name": "Joe's Pizza",
+    "address": "7 Carmine St, New York, NY 10014, United States",
+    "lat": 40.7306597,
+    "lng": -74.0021707
+  },
+  "keyword": "pizza",
+  "shape": "square",
+  "density": null,
+  "size": 7,
+  "rows": 7,
+  "cols": 7,
+  "radius_km": 2,
+  "language": "en",
+  "country": "US",
+  "points_total": 49,
+  "points_charged": 49,
+  "summary": {
+    "average_rank": 17.63,
+    "average_rank_with_misses": 20.45,
+    "top3_points": 0,
+    "found_points": 8
+  },
+  "ranks": [
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      20,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      16,
+      18,
+      null
+    ],
+    [
+      null,
+      16,
+      null,
+      20,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      17,
+      null,
+      19,
+      15
+    ]
+  ],
+  "points": [
+    {
+      "col": 0,
+      "lat": 40.748646132118374,
+      "lng": -74.02591264463835,
+      "row": 0,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "Roma Pizza & restaurant",
+          "rank": 2,
+          "place_id": "ChIJ5y1KDFhZwokR5GHmHxnyrms"
+        },
+        {
+          "name": "Quality Pizza Co. Hoboken",
+          "rank": 3,
+          "place_id": "ChIJDYFj_eZXwokR98qULDmmVBc"
+        }
+      ],
+      "rank": null
+    },
+    {
+      "col": 1,
+      "lat": 40.748646132118374,
+      "lng": -74.01799866309223,
+      "row": 0,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "Vito's Slices and Ices",
+          "rank": 2,
+          "place_id": "ChIJn_KJsVhZwokRnjqlCrxKvGE"
+        },
+        {
+          "name": "Roma Pizza & restaurant",
+          "rank": 3,
+          "place_id": "ChIJ5y1KDFhZwokR5GHmHxnyrms"
+        }
+      ],
+      "rank": null
+    },
+    {
+      "col": 2,
+      "lat": 40.748646132118374,
+      "lng": -74.01008468154612,
+      "row": 0,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "Roma Pizza & restaurant",
+          "rank": 2,
+          "place_id": "ChIJ5y1KDFhZwokR5GHmHxnyrms"
+        },
+        {
+          "name": "Quality Pizza Co. Midtown",
+          "rank": 3,
+          "place_id": "ChIJgW-n6g1ZwokRwPVvsDWxpMo"
+        }
+      ],
+      "rank": null
+    },
+    {
+      "col": 3,
+      "lat": 40.748646132118374,
+      "lng": -74.0021707,
+      "row": 0,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "Roma Pizza & restaurant",
+          "rank": 2,
+          "place_id": "ChIJ5y1KDFhZwokR5GHmHxnyrms"
+        },
+        {
+          "name": "SIMÒ PIZZA - MIDTOWN",
+          "rank": 3,
+          "place_id": "ChIJsxo_CT9ZwokR3i73Z1LaSH0"
+        }
+      ],
+      "rank": null
+    },
+    {
+      "col": 4,
+      "lat": 40.748646132118374,
+      "lng": -73.99425671845387,
+      "row": 0,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "Roma Pizza & restaurant",
+          "rank": 2,
+          "place_id": "ChIJ5y1KDFhZwokR5GHmHxnyrms"
+        },
+        {
+          "name": "Vito's Slices and Ices",
+          "rank": 3,
+          "place_id": "ChIJn_KJsVhZwokRnjqlCrxKvGE"
+        }
+      ],
+      "rank": null
+    },
+    {
+      "col": 5,
+      "lat": 40.748646132118374,
+      "lng": -73.98634273690776,
+      "row": 0,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "Vito's Slices and Ices",
+          "rank": 2,
+          "place_id": "ChIJn_KJsVhZwokRnjqlCrxKvGE"
+        },
+        {
+          "name": "Roma Pizza & restaurant",
+          "rank": 3,
+          "place_id": "ChIJ5y1KDFhZwokR5GHmHxnyrms"
+        }
+      ],
+      "rank": null
+    },
+    {
+      "col": 6,
+      "lat": 40.748646132118374,
+      "lng": -73.97842875536163,
+      "row": 0,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "Roma Pizza & restaurant",
+          "rank": 2,
+          "place_id": "ChIJ5y1KDFhZwokR5GHmHxnyrms"
+        },
+        {
+          "name": "Vito's Slices and Ices",
+          "rank": 3,
+          "place_id": "ChIJn_KJsVhZwokRnjqlCrxKvGE"
+        }
+      ],
+      "rank": null
+    },
+    {
+      "col": 0,
+      "lat": 40.74265065474558,
+      "lng": -74.02591050438778,
+      "row": 1,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "Roma Pizza & restaurant",
+          "rank": 2,
+          "place_id": "ChIJ5y1KDFhZwokR5GHmHxnyrms"
+        },
+        {
+          "name": "NY Pizza Suprema",
+          "rank": 3,
+          "place_id": "ChIJjaD94kFZwokR-20CXqlpy_4"
+        }
+      ],
+      "rank": null
+    },
+    {
+      "col": 1,
+      "lat": 40.74265065474558,
+      "lng": -74.01799723625851,
+      "row": 1,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "Roma Pizza & restaurant",
+          "rank": 2,
+          "place_id": "ChIJ5y1KDFhZwokR5GHmHxnyrms"
+        },
+        {
+          "name": "Quality Pizza Co. Midtown",
+          "rank": 3,
+          "place_id": "ChIJgW-n6g1ZwokRwPVvsDWxpMo"
+        }
+      ],
+      "rank": null
+    },
+    {
+      "col": 2,
+      "lat": 40.74265065474558,
+      "lng": -74.01008396812925,
+      "row": 1,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "Roma Pizza & restaurant",
+          "rank": 2,
+          "place_id": "ChIJ5y1KDFhZwokR5GHmHxnyrms"
+        },
+        {
+          "name": "Vito's Slices and Ices",
+          "rank": 3,
+          "place_id": "ChIJn_KJsVhZwokRnjqlCrxKvGE"
+        }
+      ],
+      "rank": null
+    },
+    {
+      "col": 3,
+      "lat": 40.74265065474558,
+      "lng": -74.0021707,
+      "row": 1,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "Vito's Slices and Ices",
+          "rank": 2,
+          "place_id": "ChIJn_KJsVhZwokRnjqlCrxKvGE"
+        },
+        {
+          "name": "Roma Pizza & restaurant",
+          "rank": 3,
+          "place_id": "ChIJ5y1KDFhZwokR5GHmHxnyrms"
+        }
+      ],
+      "rank": null
+    },
+    {
+      "col": 4,
+      "lat": 40.74265065474558,
+      "lng": -73.99425743187074,
+      "row": 1,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "Vito's Slices and Ices",
+          "rank": 2,
+          "place_id": "ChIJn_KJsVhZwokRnjqlCrxKvGE"
+        },
+        {
+          "name": "SIMÒ PIZZA - MIDTOWN",
+          "rank": 3,
+          "place_id": "ChIJsxo_CT9ZwokR3i73Z1LaSH0"
+        }
+      ],
+      "rank": null
+    },
+    {
+      "col": 5,
+      "lat": 40.74265065474558,
+      "lng": -73.98634416374148,
+      "row": 1,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "Vito's Slices and Ices",
+          "rank": 2,
+          "place_id": "ChIJn_KJsVhZwokRnjqlCrxKvGE"
+        },
+        {
+          "name": "ANDIAMO PIZZA",
+          "rank": 3,
+          "place_id": "ChIJvxSJw4VZwokRI_KM0rv6Ths"
+        }
+      ],
+      "rank": null
+    },
+    {
+      "col": 6,
+      "lat": 40.74265065474558,
+      "lng": -73.9784308956122,
+      "row": 1,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "Roma Pizza & restaurant",
+          "rank": 2,
+          "place_id": "ChIJ5y1KDFhZwokR5GHmHxnyrms"
+        },
+        {
+          "name": "Vito's Slices and Ices",
+          "rank": 3,
+          "place_id": "ChIJn_KJsVhZwokRnjqlCrxKvGE"
+        }
+      ],
+      "rank": null
+    },
+    {
+      "col": 0,
+      "lat": 40.73665517737279,
+      "lng": -74.02590836478294,
+      "row": 2,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "Song' E Napule",
+          "rank": 2,
+          "place_id": "ChIJ04qK9Y1ZwokRgw_VSJz_lAY"
+        },
+        {
+          "name": "L’industrie Pizzeria - West Village",
+          "rank": 3,
+          "place_id": "ChIJ92OsaJVZwokRsC54kf-J-3g"
+        }
+      ],
+      "rank": 20
+    },
+    {
+      "col": 1,
+      "lat": 40.73665517737279,
+      "lng": -74.0179958098553,
+      "row": 2,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "Rubirosa",
+          "rank": 2,
+          "place_id": "ChIJs8MdNo9ZwokRTPUHiArLC-o"
+        },
+        {
+          "name": "Roma Pizza & restaurant",
+          "rank": 3,
+          "place_id": "ChIJ5y1KDFhZwokR5GHmHxnyrms"
+        }
+      ],
+      "rank": null
+    },
+    {
+      "col": 2,
+      "lat": 40.73665517737279,
+      "lng": -74.01008325492764,
+      "row": 2,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "Rubirosa",
+          "rank": 2,
+          "place_id": "ChIJs8MdNo9ZwokRTPUHiArLC-o"
+        },
+        {
+          "name": "Fermento Pizza NYC",
+          "rank": 3,
+          "place_id": "ChIJsyU-TQBZwokRi5heLBtXWvA"
+        }
+      ],
+      "rank": null
+    },
+    {
+      "col": 3,
+      "lat": 40.73665517737279,
+      "lng": -74.0021707,
+      "row": 2,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "Vito's Slices and Ices",
+          "rank": 2,
+          "place_id": "ChIJn_KJsVhZwokRnjqlCrxKvGE"
+        },
+        {
+          "name": "Roma Pizza & restaurant",
+          "rank": 3,
+          "place_id": "ChIJ5y1KDFhZwokR5GHmHxnyrms"
+        }
+      ],
+      "rank": null
+    },
+    {
+      "col": 4,
+      "lat": 40.73665517737279,
+      "lng": -73.99425814507235,
+      "row": 2,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "Vito's Slices and Ices",
+          "rank": 2,
+          "place_id": "ChIJn_KJsVhZwokRnjqlCrxKvGE"
+        },
+        {
+          "name": "Roma Pizza & restaurant",
+          "rank": 3,
+          "place_id": "ChIJ5y1KDFhZwokR5GHmHxnyrms"
+        }
+      ],
+      "rank": null
+    },
+    {
+      "col": 5,
+      "lat": 40.73665517737279,
+      "lng": -73.9863455901447,
+      "row": 2,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "Vito's Slices and Ices",
+          "rank": 2,
+          "place_id": "ChIJn_KJsVhZwokRnjqlCrxKvGE"
+        },
+        {
+          "name": "Roma Pizza & restaurant",
+          "rank": 3,
+          "place_id": "ChIJ5y1KDFhZwokR5GHmHxnyrms"
+        }
+      ],
+      "rank": null
+    },
+    {
+      "col": 6,
+      "lat": 40.73665517737279,
+      "lng": -73.97843303521705,
+      "row": 2,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "Roma Pizza & restaurant",
+          "rank": 2,
+          "place_id": "ChIJ5y1KDFhZwokR5GHmHxnyrms"
+        },
+        {
+          "name": "SIMÒ PIZZA - MIDTOWN",
+          "rank": 3,
+          "place_id": "ChIJsxo_CT9ZwokR3i73Z1LaSH0"
+        }
+      ],
+      "rank": null
+    },
+    {
+      "col": 0,
+      "lat": 40.7306597,
+      "lng": -74.0259062258236,
+      "row": 3,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "Song' E Napule",
+          "rank": 2,
+          "place_id": "ChIJ04qK9Y1ZwokRgw_VSJz_lAY"
+        },
+        {
+          "name": "Roma Pizza & restaurant",
+          "rank": 3,
+          "place_id": "ChIJ5y1KDFhZwokR5GHmHxnyrms"
+        }
+      ],
+      "rank": null
+    },
+    {
+      "col": 1,
+      "lat": 40.7306597,
+      "lng": -74.01799438388241,
+      "row": 3,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "Rubirosa",
+          "rank": 2,
+          "place_id": "ChIJs8MdNo9ZwokRTPUHiArLC-o"
+        },
+        {
+          "name": "Roma Pizza & restaurant",
+          "rank": 3,
+          "place_id": "ChIJ5y1KDFhZwokR5GHmHxnyrms"
+        }
+      ],
+      "rank": null
+    },
+    {
+      "col": 2,
+      "lat": 40.7306597,
+      "lng": -74.0100825419412,
+      "row": 3,
+      "top": [
+        {
+          "name": "Song' E Napule",
+          "rank": 1,
+          "place_id": "ChIJ04qK9Y1ZwokRgw_VSJz_lAY"
+        },
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 2,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "L’industrie Pizzeria - West Village",
+          "rank": 3,
+          "place_id": "ChIJ92OsaJVZwokRsC54kf-J-3g"
+        }
+      ],
+      "rank": null
+    },
+    {
+      "col": 3,
+      "lat": 40.7306597,
+      "lng": -74.0021707,
+      "row": 3,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "Rubirosa",
+          "rank": 2,
+          "place_id": "ChIJs8MdNo9ZwokRTPUHiArLC-o"
+        },
+        {
+          "name": "Roma Pizza & restaurant",
+          "rank": 3,
+          "place_id": "ChIJ5y1KDFhZwokR5GHmHxnyrms"
+        }
+      ],
+      "rank": null
+    },
+    {
+      "col": 4,
+      "lat": 40.7306597,
+      "lng": -73.99425885805879,
+      "row": 3,
+      "top": [
+        {
+          "name": "L’industrie Pizzeria - West Village",
+          "rank": 1,
+          "place_id": "ChIJ92OsaJVZwokRsC54kf-J-3g"
+        },
+        {
+          "name": "Nolita Pizza",
+          "rank": 2,
+          "place_id": "ChIJQ9SZB4FZwokR4-JVxNDiHuw"
+        },
+        {
+          "name": "Pizzazz",
+          "rank": 3,
+          "place_id": "ChIJ_YYcCABZwokRL3PFUU5PTfs"
+        }
+      ],
+      "rank": 16
+    },
+    {
+      "col": 5,
+      "lat": 40.7306597,
+      "lng": -73.98634701611758,
+      "row": 3,
+      "top": [
+        {
+          "name": "Nolita Pizza",
+          "rank": 1,
+          "place_id": "ChIJQ9SZB4FZwokR4-JVxNDiHuw"
+        },
+        {
+          "name": "L’industrie Pizzeria - West Village",
+          "rank": 2,
+          "place_id": "ChIJ92OsaJVZwokRsC54kf-J-3g"
+        },
+        {
+          "name": "Joe’s Pizza",
+          "rank": 3,
+          "place_id": "ChIJqdNaaBVbwokRLTafYrQlZI8"
+        }
+      ],
+      "rank": 18
+    },
+    {
+      "col": 6,
+      "lat": 40.7306597,
+      "lng": -73.97843517417638,
+      "row": 3,
+      "top": [
+        {
+          "name": "Joe's Pizza Broadway",
+          "rank": 1,
+          "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs"
+        },
+        {
+          "name": "Rubirosa",
+          "rank": 2,
+          "place_id": "ChIJs8MdNo9ZwokRTPUHiArLC-o"
+        },
+        {
+          "name": "Song' E Napule",
+          "rank": 3,
+          "place_id": "ChIJ04qK9Y1ZwokRgw_VSJz_lAY"
+        }
+      ],
+      "rank": null
+    },
+    {
+      "col": 0,
+      "lat": 40.724664222627204,
+      "lng": -74.02590408750957,
+      "row": 4,
+      "top": [
+        {
+          "name": "Rubirosa",
+          "rank": 1,
+          "place_id": "ChIJs8MdNo9ZwokRTPUHiArLC-o"
+        },
+        {
+          "name": "Song' E Napule",
+          "rank": 2,
+          "place_id": "ChIJ04qK9Y1ZwokRgw_VSJz_lAY"
+        },
+        {
+          "name": "Fermento Pizza NYC",
+          "rank": 3,
+          "place_id": "ChIJsyU-TQBZwokRi5heLBtXWvA"
+        }
+      ],
+      "rank": null
+    },
+    {
+      "col": 1,
+      "lat": 40.724664222627204,
+      "lng": -74.01799295833972,
+      "row": 4,
+      "top": [
+        {
+          "name": "Nolita Pizza",
+          "rank": 1,
+          "place_id": "ChIJQ9SZB4FZwokR4-JVxNDiHuw"
+        },
+        {
+          "name": "L’industrie Pizzeria - West Village",
+          "rank": 2,
+          "place_id": "ChIJ92OsaJVZwokRsC54kf-J-3g"
+        },
+        {
+          "name": "Joe’s Pizza",
+          "rank": 3,
+          "place_id": "ChIJqdNaaBVbwokRLTafYrQlZI8"
+        }
+      ],
+      "rank": 16
+    },
+    {
+      "col": 2,
+      "lat": 40.724664222627204,
+      "lng": -74.01008182916985,
+      "row": 4,
+      "top": [
+        {
+          "name": "Grand Street Pizza",
+          "rank": 1,
+          "place_id": "ChIJKdh7frRZwokR7bY0xRFv2Mg"
+        },
+        {
+          "name": "Rubirosa",
+          "rank": 2,
+          "place_id": "ChIJs8MdNo9ZwokRTPUHiArLC-o"
+        },
+        {
+          "name": "Song' E Napule",
+          "rank": 3,
+          "place_id": "ChIJ04qK9Y1ZwokRgw_VSJz_lAY"
+        }
+      ],
+      "rank": null
+    },
+    {
+      "col": 3,
+      "lat": 40.724664222627204,
+      "lng": -74.0021707,
+      "row": 4,
+      "top": [
+        {
+          "name": "Song' E Napule",
+          "rank": 1,
+          "place_id": "ChIJ04qK9Y1ZwokRgw_VSJz_lAY"
+        },
+        {
+          "name": "L’industrie Pizzeria - West Village",
+          "rank": 2,
+          "place_id": "ChIJ92OsaJVZwokRsC54kf-J-3g"
+        },
+        {
+          "name": "Rubirosa",
+          "rank": 3,
+          "place_id": "ChIJs8MdNo9ZwokRTPUHiArLC-o"
+        }
+      ],
+      "rank": 20
+    },
+    {
+      "col": 4,
+      "lat": 40.724664222627204,
+      "lng": -73.99425957083014,
+      "row": 4,
+      "top": [
+        {
+          "name": "Rubirosa",
+          "rank": 1,
+          "place_id": "ChIJs8MdNo9ZwokRTPUHiArLC-o"
+        },
+        {
+          "name": "Song' E Napule",
+          "rank": 2,
+          "place_id": "ChIJ04qK9Y1ZwokRgw_VSJz_lAY"
+        },
+        {
+          "name": "Fermento Pizza NYC",
+          "rank": 3,
+          "place_id": "ChIJsyU-TQBZwokRi5heLBtXWvA"
+        }
+      ],
+      "rank": null
+    },
+    {
+      "col": 5,
+      "lat": 40.724664222627204,
+      "lng": -73.98634844166027,
+      "row": 4,
+      "top": [
+        {
+          "name": "Rubirosa",
+          "rank": 1,
+          "place_id": "ChIJs8MdNo9ZwokRTPUHiArLC-o"
+        },
+        {
+          "name": "Fermento Pizza NYC",
+          "rank": 2,
+          "place_id": "ChIJsyU-TQBZwokRi5heLBtXWvA"
+        },
+        {
+          "name": "Song' E Napule",
+          "rank": 3,
+          "place_id": "ChIJ04qK9Y1ZwokRgw_VSJz_lAY"
+        }
+      ],
+      "rank": null
+    },
+    {
+      "col": 6,
+      "lat": 40.724664222627204,
+      "lng": -73.97843731249041,
+      "row": 4,
+      "top": [
+        {
+          "name": "L’industrie Pizzeria - West Village",
+          "rank": 1,
+          "place_id": "ChIJ92OsaJVZwokRsC54kf-J-3g"
+        },
+        {
+          "name": "Song' E Napule",
+          "rank": 2,
+          "place_id": "ChIJ04qK9Y1ZwokRgw_VSJz_lAY"
+        },
+        {
+          "name": "Rubirosa",
+          "rank": 3,
+          "place_id": "ChIJs8MdNo9ZwokRTPUHiArLC-o"
+        }
+      ],
+      "rank": null
+    },
+    {
+      "col": 0,
+      "lat": 40.71866874525441,
+      "lng": -74.0259019498406,
+      "row": 5,
+      "top": [
+        {
+          "name": "Rubirosa",
+          "rank": 1,
+          "place_id": "ChIJs8MdNo9ZwokRTPUHiArLC-o"
+        },
+        {
+          "name": "Song' E Napule",
+          "rank": 2,
+          "place_id": "ChIJ04qK9Y1ZwokRgw_VSJz_lAY"
+        },
+        {
+          "name": "Prince Street Pizza",
+          "rank": 3,
+          "place_id": "ChIJ6xvs94VZwokRnT1D2lX2OTw"
+        }
+      ],
+      "rank": null
+    },
+    {
+      "col": 1,
+      "lat": 40.71866874525441,
+      "lng": -74.01799153322706,
+      "row": 5,
+      "top": [
+        {
+          "name": "Grand Street Pizza",
+          "rank": 1,
+          "place_id": "ChIJKdh7frRZwokR7bY0xRFv2Mg"
+        },
+        {
+          "name": "Rubirosa",
+          "rank": 2,
+          "place_id": "ChIJs8MdNo9ZwokRTPUHiArLC-o"
+        },
+        {
+          "name": "Song' E Napule",
+          "rank": 3,
+          "place_id": "ChIJ04qK9Y1ZwokRgw_VSJz_lAY"
+        }
+      ],
+      "rank": null
+    },
+    {
+      "col": 2,
+      "lat": 40.71866874525441,
+      "lng": -74.01008111661353,
+      "row": 5,
+      "top": [
+        {
+          "name": "Rubirosa",
+          "rank": 1,
+          "place_id": "ChIJs8MdNo9ZwokRTPUHiArLC-o"
+        },
+        {
+          "name": "Fermento Pizza NYC",
+          "rank": 2,
+          "place_id": "ChIJsyU-TQBZwokRi5heLBtXWvA"
+        },
+        {
+          "name": "Song' E Napule",
+          "rank": 3,
+          "place_id": "ChIJ04qK9Y1ZwokRgw_VSJz_lAY"
+        }
+      ],
+      "rank": null
+    },
+    {
+      "col": 3,
+      "lat": 40.71866874525441,
+      "lng": -74.0021707,
+      "row": 5,
+      "top": [
+        {
+          "name": "Rubirosa",
+          "rank": 1,
+          "place_id": "ChIJs8MdNo9ZwokRTPUHiArLC-o"
+        },
+        {
+          "name": "Song' E Napule",
+          "rank": 2,
+          "place_id": "ChIJ04qK9Y1ZwokRgw_VSJz_lAY"
+        },
+        {
+          "name": "Fermento Pizza NYC",
+          "rank": 3,
+          "place_id": "ChIJsyU-TQBZwokRi5heLBtXWvA"
+        }
+      ],
+      "rank": null
+    },
+    {
+      "col": 4,
+      "lat": 40.71866874525441,
+      "lng": -73.99426028338645,
+      "row": 5,
+      "top": [
+        {
+          "name": "Rubirosa",
+          "rank": 1,
+          "place_id": "ChIJs8MdNo9ZwokRTPUHiArLC-o"
+        },
+        {
+          "name": "Song' E Napule",
+          "rank": 2,
+          "place_id": "ChIJ04qK9Y1ZwokRgw_VSJz_lAY"
+        },
+        {
+          "name": "Fermento Pizza NYC",
+          "rank": 3,
+          "place_id": "ChIJsyU-TQBZwokRi5heLBtXWvA"
+        }
+      ],
+      "rank": null
+    },
+    {
+      "col": 5,
+      "lat": 40.71866874525441,
+      "lng": -73.98634986677293,
+      "row": 5,
+      "top": [
+        {
+          "name": "Song' E Napule",
+          "rank": 1,
+          "place_id": "ChIJ04qK9Y1ZwokRgw_VSJz_lAY"
+        },
+        {
+          "name": "L’industrie Pizzeria - West Village",
+          "rank": 2,
+          "place_id": "ChIJ92OsaJVZwokRsC54kf-J-3g"
+        },
+        {
+          "name": "Rubirosa",
+          "rank": 3,
+          "place_id": "ChIJs8MdNo9ZwokRTPUHiArLC-o"
+        }
+      ],
+      "rank": null
+    },
+    {
+      "col": 6,
+      "lat": 40.71866874525441,
+      "lng": -73.97843945015939,
+      "row": 5,
+      "top": [
+        {
+          "name": "Song' E Napule",
+          "rank": 1,
+          "place_id": "ChIJ04qK9Y1ZwokRgw_VSJz_lAY"
+        },
+        {
+          "name": "Rubirosa",
+          "rank": 2,
+          "place_id": "ChIJs8MdNo9ZwokRTPUHiArLC-o"
+        },
+        {
+          "name": "L’industrie Pizzeria - West Village",
+          "rank": 3,
+          "place_id": "ChIJ92OsaJVZwokRsC54kf-J-3g"
+        }
+      ],
+      "rank": null
+    },
+    {
+      "col": 0,
+      "lat": 40.71267326788162,
+      "lng": -74.02589981281649,
+      "row": 6,
+      "top": [
+        {
+          "name": "Dellarocco's Brick Oven Pizza",
+          "rank": 1,
+          "place_id": "ChIJRYqTNEZawokRuSMWeyyinyI"
+        },
+        {
+          "name": "The Pizzeria on Pine",
+          "rank": 2,
+          "place_id": "ChIJ4bwASoZRwokRVf4i3jFyrlE"
+        },
+        {
+          "name": "Tino's Artisan Pizza Co.",
+          "rank": 3,
+          "place_id": "ChIJdWDWaJNRwokRENfTMqBqAA8"
+        }
+      ],
+      "rank": null
+    },
+    {
+      "col": 1,
+      "lat": 40.71267326788162,
+      "lng": -74.01799010854432,
+      "row": 6,
+      "top": [
+        {
+          "name": "Rubirosa",
+          "rank": 1,
+          "place_id": "ChIJs8MdNo9ZwokRTPUHiArLC-o"
+        },
+        {
+          "name": "Song' E Napule",
+          "rank": 2,
+          "place_id": "ChIJ04qK9Y1ZwokRgw_VSJz_lAY"
+        },
+        {
+          "name": "Fermento Pizza NYC",
+          "rank": 3,
+          "place_id": "ChIJsyU-TQBZwokRi5heLBtXWvA"
+        }
+      ],
+      "rank": null
+    },
+    {
+      "col": 2,
+      "lat": 40.71267326788162,
+      "lng": -74.01008040427216,
+      "row": 6,
+      "top": [
+        {
+          "name": "Song' E Napule",
+          "rank": 1,
+          "place_id": "ChIJ04qK9Y1ZwokRgw_VSJz_lAY"
+        },
+        {
+          "name": "Rubirosa",
+          "rank": 2,
+          "place_id": "ChIJs8MdNo9ZwokRTPUHiArLC-o"
+        },
+        {
+          "name": "Pizza Loves Sauce",
+          "rank": 3,
+          "place_id": "ChIJ52tvBGhZwokROhzPBm3wPrU"
+        }
+      ],
+      "rank": null
+    },
+    {
+      "col": 3,
+      "lat": 40.71267326788162,
+      "lng": -74.0021707,
+      "row": 6,
+      "top": [
+        {
+          "name": "Song' E Napule",
+          "rank": 1,
+          "place_id": "ChIJ04qK9Y1ZwokRgw_VSJz_lAY"
+        },
+        {
+          "name": "L’industrie Pizzeria - West Village",
+          "rank": 2,
+          "place_id": "ChIJ92OsaJVZwokRsC54kf-J-3g"
+        },
+        {
+          "name": "Rubirosa",
+          "rank": 3,
+          "place_id": "ChIJs8MdNo9ZwokRTPUHiArLC-o"
+        }
+      ],
+      "rank": 17
+    },
+    {
+      "col": 4,
+      "lat": 40.71267326788162,
+      "lng": -73.99426099572783,
+      "row": 6,
+      "top": [
+        {
+          "name": "Song' E Napule",
+          "rank": 1,
+          "place_id": "ChIJ04qK9Y1ZwokRgw_VSJz_lAY"
+        },
+        {
+          "name": "L’industrie Pizzeria - West Village",
+          "rank": 2,
+          "place_id": "ChIJ92OsaJVZwokRsC54kf-J-3g"
+        },
+        {
+          "name": "Rubirosa",
+          "rank": 3,
+          "place_id": "ChIJs8MdNo9ZwokRTPUHiArLC-o"
+        }
+      ],
+      "rank": null
+    },
+    {
+      "col": 5,
+      "lat": 40.71267326788162,
+      "lng": -73.98635129145566,
+      "row": 6,
+      "top": [
+        {
+          "name": "Nolita Pizza",
+          "rank": 1,
+          "place_id": "ChIJQ9SZB4FZwokR4-JVxNDiHuw"
+        },
+        {
+          "name": "L’industrie Pizzeria - West Village",
+          "rank": 2,
+          "place_id": "ChIJ92OsaJVZwokRsC54kf-J-3g"
+        },
+        {
+          "name": "Joe’s Pizza",
+          "rank": 3,
+          "place_id": "ChIJqdNaaBVbwokRLTafYrQlZI8"
+        }
+      ],
+      "rank": 19
+    },
+    {
+      "col": 6,
+      "lat": 40.71267326788162,
+      "lng": -73.9784415871835,
+      "row": 6,
+      "top": [
+        {
+          "name": "L’industrie Pizzeria - West Village",
+          "rank": 1,
+          "place_id": "ChIJ92OsaJVZwokRsC54kf-J-3g"
+        },
+        {
+          "name": "Nolita Pizza",
+          "rank": 2,
+          "place_id": "ChIJQ9SZB4FZwokR4-JVxNDiHuw"
+        },
+        {
+          "name": "Pizzazz",
+          "rank": 3,
+          "place_id": "ChIJ_YYcCABZwokRL3PFUU5PTfs"
+        }
+      ],
+      "rank": 15
+    }
+  ],
+  "competitors": [
+    {
+      "place_id": "ChIJifIePKtZwokRVZ-UdRGkZzs",
+      "name": "Joe's Pizza Broadway",
+      "top3_points": 26,
+      "first_points": 25,
+      "ahead_points": 26
+    },
+    {
+      "place_id": "ChIJs8MdNo9ZwokRTPUHiArLC-o",
+      "name": "Rubirosa",
+      "top3_points": 22,
+      "first_points": 8,
+      "ahead_points": 22
+    },
+    {
+      "place_id": "ChIJ04qK9Y1ZwokRgw_VSJz_lAY",
+      "name": "Song' E Napule",
+      "top3_points": 21,
+      "first_points": 7,
+      "ahead_points": 21
+    },
+    {
+      "place_id": "ChIJ5y1KDFhZwokR5GHmHxnyrms",
+      "name": "Roma Pizza & restaurant",
+      "top3_points": 20,
+      "first_points": 0,
+      "ahead_points": 20
+    },
+    {
+      "place_id": "ChIJ92OsaJVZwokRsC54kf-J-3g",
+      "name": "L’industrie Pizzeria - West Village",
+      "top3_points": 13,
+      "first_points": 3,
+      "ahead_points": 13
+    },
+    {
+      "place_id": "ChIJn_KJsVhZwokRnjqlCrxKvGE",
+      "name": "Vito's Slices and Ices",
+      "top3_points": 12,
+      "first_points": 0,
+      "ahead_points": 12
+    },
+    {
+      "place_id": "ChIJsyU-TQBZwokRi5heLBtXWvA",
+      "name": "Fermento Pizza NYC",
+      "top3_points": 8,
+      "first_points": 0,
+      "ahead_points": 8
+    },
+    {
+      "place_id": "ChIJQ9SZB4FZwokR4-JVxNDiHuw",
+      "name": "Nolita Pizza",
+      "top3_points": 5,
+      "first_points": 3,
+      "ahead_points": 5
+    },
+    {
+      "place_id": "ChIJqdNaaBVbwokRLTafYrQlZI8",
+      "name": "Joe’s Pizza",
+      "top3_points": 3,
+      "first_points": 0,
+      "ahead_points": 3
+    },
+    {
+      "place_id": "ChIJsxo_CT9ZwokR3i73Z1LaSH0",
+      "name": "SIMÒ PIZZA - MIDTOWN",
+      "top3_points": 3,
+      "first_points": 0,
+      "ahead_points": 3
+    }
+  ],
+  "previous": null,
+  "error": null,
+  "webhook": null,
+  "created_at": "2026-10-17T18:39:21.796873+00:00",
+  "completed_at": "2026-10-17T18:39:30.523+00:00"
+}

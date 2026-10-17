@@ -1,0 +1,548 @@
+{
+  "name": "Track Google Maps rankings for many keywords in Google Sheets with GeoGridAPI",
+  "nodes": [
+    {
+      "id": "47c5f348-3ac3-5e53-b458-266e3c938898",
+      "name": "Overview",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -520,
+        -180
+      ],
+      "parameters": {
+        "content": "## Track Google Maps rankings in Google Sheets\n\nEvery week, this workflow measures a list of businesses and keywords on Google Maps with GeoGridAPI geo-grids, then adds one row per grid to a Google Sheet: average rank, points in the top 3, points in the top 20. Over the weeks the sheet becomes a local rank tracker you can chart or share with clients.\n\n### How it works\n1. The schedule starts the workflow every Monday at 07:00.\n2. **Read keywords** reads the `Keywords` tab; **Build the batch** skips empty rows and stops if there are more than 50.\n3. **Run batch** sends all the grids in one call, with the same grid size and radius.\n4. The workflow checks the batch every minute until every grid is done (one hour at most).\n5. Each grid becomes a row in the `Results` tab, with its status and the reason if it failed (failed grids are refunded).\n\n### Setup\n1. Create a free account on [geogridapi.io](https://geogridapi.io) (500 free credits) and an API key. `gga_test_` keys are free and return sample grids.\n2. Add a **Header Auth** credential named `GeoGridAPI key`: name `Authorization`, value `Bearer gga_live_...`. Select it in the two HTTP Request nodes.\n3. Create a Google Sheet with a `Keywords` tab (columns `business`, `keyword`) and a `Results` tab (columns `date`, `business`, `keyword`, `status`, `average_rank`, `top3_points`, `found_points`, `listing`, `grid_id`, `error`).\n4. Connect Google Sheets and paste the sheet ID in **Settings**.\n\n### Customization tips\n- Cost: 1 credit per point. 20 keywords on a 5 x 5 grid = 500 credits a week.\n- Use `place_id` instead of `query` for listings that share a name.",
+        "width": 460,
+        "height": 820
+      }
+    },
+    {
+      "id": "3adedaf7-c154-505e-be1b-4a85c063f376",
+      "name": "Section: input",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -20,
+        120
+      ],
+      "parameters": {
+        "content": "## 1. Read the keywords to track\nTab `Keywords`, columns `business` and `keyword`, 50 rows at most.",
+        "width": 680,
+        "height": 340,
+        "color": 7
+      }
+    },
+    {
+      "id": "725212cf-2fed-5a0f-8c5a-def14ea22dc4",
+      "name": "Section: measure",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        700,
+        120
+      ],
+      "parameters": {
+        "content": "## 2. Measure them in one batch\nChecked every minute until every grid is done (one hour at most).",
+        "width": 1120,
+        "height": 340,
+        "color": 7
+      }
+    },
+    {
+      "id": "adc1e033-37ad-5b93-b655-dc0a97131330",
+      "name": "Section: output",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1860,
+        120
+      ],
+      "parameters": {
+        "content": "## 3. Write one row per grid\nTab `Results`.",
+        "width": 680,
+        "height": 340,
+        "color": 7
+      }
+    },
+    {
+      "id": "0af4bda7-d765-52d0-8958-05c68706b784",
+      "name": "Every Monday 07:00",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        40,
+        300
+      ],
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "weeks",
+              "weeksInterval": 1,
+              "triggerAtDay": [
+                1
+              ],
+              "triggerAtHour": 7,
+              "triggerAtMinute": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "4580776c-cb4a-57c8-ba0d-3aa55d93bd76",
+      "name": "Settings",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        260,
+        300
+      ],
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "7b42bf4f-f66b-54e1-aabf-9e2a5eff4582",
+              "name": "sheetId",
+              "type": "string",
+              "value": "YOUR_GOOGLE_SHEET_ID"
+            },
+            {
+              "id": "c7eddc87-1606-542b-a65c-7ed5a55663e0",
+              "name": "gridSize",
+              "type": "number",
+              "value": 5
+            },
+            {
+              "id": "9d870690-efa0-539c-aee5-ca77c95609e4",
+              "name": "radiusKm",
+              "type": "number",
+              "value": 3
+            },
+            {
+              "id": "3c71b5ea-5b21-595d-aff5-ec2ef15f315b",
+              "name": "language",
+              "type": "string",
+              "value": "en"
+            }
+          ]
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "e01ad071-9a7f-5362-9e6c-18bb3338e7e2",
+      "name": "Read keywords",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        460,
+        300
+      ],
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $('Settings').first().json.sheetId }}"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "name",
+          "value": "Keywords"
+        },
+        "options": {}
+      },
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "google-sheets-account",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "id": "6537e683-fd34-5ae0-a001-2b289b69be06",
+      "name": "Build the batch",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        660,
+        300
+      ],
+      "parameters": {
+        "jsCode": "// One batch holds up to 50 grids with the same format.\nconst settings = $('Settings').first().json;\nconst rows = $input.all()\n  .map((row) => ({ business: String(row.json.business ?? '').trim(), keyword: String(row.json.keyword ?? '').trim() }))\n  .filter((row) => row.business && row.keyword);\n\nif (rows.length === 0) throw new Error('The Keywords tab has no row with both a business and a keyword.');\nif (rows.length > 50) throw new Error(`The Keywords tab has ${rows.length} rows; one batch holds 50. Split them across two sheets or two copies of this workflow.`);\n\nconst body = {\n  size: settings.gridSize,\n  radius_km: settings.radiusKm,\n  language: settings.language,\n  items: rows.map((row) => ({ query: row.business, keyword: row.keyword })),\n};\nreturn [{ json: { rows, body } }];"
+      }
+    },
+    {
+      "id": "3e356092-017d-50b8-ad78-ea7ac3176ce0",
+      "name": "Run batch",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        880,
+        300
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.geogridapi.io/v1/batches",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Idempotency-Key",
+              "value": "=n8n-{{ $workflow.id }}-{{ $execution.id }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json.body) }}",
+        "options": {}
+      },
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "geogridapi-key",
+          "name": "GeoGridAPI key"
+        }
+      },
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000
+    },
+    {
+      "id": "7ed1ecf4-cf24-50a6-ac2b-939f35aac9ed",
+      "name": "Wait 1 minute",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        1080,
+        300
+      ],
+      "parameters": {
+        "resume": "timeInterval",
+        "amount": 60,
+        "unit": "seconds"
+      },
+      "webhookId": "7212185e-6363-50c6-b091-9b34f2baa2f1"
+    },
+    {
+      "id": "255a88ad-a698-5e3f-a70a-c4228f8ec6dd",
+      "name": "Get batch",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1280,
+        300
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "=https://api.geogridapi.io/v1/batches/{{ $('Run batch').first().json.id }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {}
+      },
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "geogridapi-key",
+          "name": "GeoGridAPI key"
+        }
+      },
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000
+    },
+    {
+      "id": "13c060ff-f631-566b-b74f-d9af1eb30fd3",
+      "name": "Batch finished?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1480,
+        300
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "cb25ef38-33cc-534f-856e-4719ad8c1c46",
+              "leftValue": "={{ $json.status === 'completed' || $runIndex >= 59 }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ]
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "04fcd531-de0b-5274-b58f-125f88099b6a",
+      "name": "All grids done?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1680,
+        200
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "59d245e3-a723-5c90-882f-34c13f53abad",
+              "leftValue": "={{ $json.status === 'completed' }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ]
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "bf400715-8e26-58e0-a0fa-705970dfdd78",
+      "name": "Stop: batch still running",
+      "type": "n8n-nodes-base.stopAndError",
+      "typeVersion": 1,
+      "position": [
+        1900,
+        380
+      ],
+      "parameters": {
+        "errorMessage": "=Batch {{ $json.id }} is still running after an hour ({{ $json.counts.completed }} of {{ $json.items_count }} grids done). Its grids keep running: see them in the GeoGridAPI console. Nothing was written to the sheet."
+      }
+    },
+    {
+      "id": "4be3a857-1c83-5447-bbf8-22ac967d7478",
+      "name": "One item per grid",
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        1920,
+        160
+      ],
+      "parameters": {
+        "fieldToSplitOut": "items",
+        "include": "noOtherFields",
+        "options": {}
+      }
+    },
+    {
+      "id": "89bbfbeb-07ce-534f-9bd6-04a819907ae0",
+      "name": "Format row",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2140,
+        160
+      ],
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "// One row per grid. Numbers stay numbers; failed grids keep their reason.\nconst row = $('Build the batch').first().json.rows[$json.index] ?? {};\nconst error = typeof $json.error === 'string' ? $json.error : $json.error?.message;\nreturn {\n  json: {\n    date: $now.toFormat('yyyy-LL-dd'),\n    business: row.business ?? '',\n    keyword: $json.keyword,\n    status: $json.status,\n    average_rank: $json.summary?.average_rank ?? '',\n    top3_points: $json.summary?.top3_points ?? '',\n    found_points: $json.summary?.found_points ?? '',\n    listing: $json.place?.name ?? '',\n    grid_id: $json.grid_id ?? '',\n    error: error ?? '',\n  },\n};"
+      }
+    },
+    {
+      "id": "4dfbc0da-62c5-5658-b03d-e8bf12971ed7",
+      "name": "Append to Results",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        2360,
+        160
+      ],
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $('Settings').first().json.sheetId }}"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "name",
+          "value": "Results"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": [],
+          "schema": []
+        },
+        "options": {
+          "cellFormat": "RAW"
+        }
+      },
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "google-sheets-account",
+          "name": "Google Sheets account"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Every Monday 07:00": {
+      "main": [
+        [
+          {
+            "node": "Settings",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Settings": {
+      "main": [
+        [
+          {
+            "node": "Read keywords",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read keywords": {
+      "main": [
+        [
+          {
+            "node": "Build the batch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build the batch": {
+      "main": [
+        [
+          {
+            "node": "Run batch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Run batch": {
+      "main": [
+        [
+          {
+            "node": "Wait 1 minute",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait 1 minute": {
+      "main": [
+        [
+          {
+            "node": "Get batch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get batch": {
+      "main": [
+        [
+          {
+            "node": "Batch finished?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Batch finished?": {
+      "main": [
+        [
+          {
+            "node": "All grids done?",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Wait 1 minute",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "All grids done?": {
+      "main": [
+        [
+          {
+            "node": "One item per grid",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Stop: batch still running",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "One item per grid": {
+      "main": [
+        [
+          {
+            "node": "Format row",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format row": {
+      "main": [
+        [
+          {
+            "node": "Append to Results",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "meta": {
+    "templateCredsSetupCompleted": false
+  }
+}
